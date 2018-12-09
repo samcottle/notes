@@ -11,5 +11,5 @@ Git works on both text and binary files (images, video, audio, etc.), and treats
 ## Git commands
 - `git status`: Useful information, such as which files are **staged**.
 - `git add`: Moved files from **unstaged** to **staged**.
-- `git commit`: Commits any **staged** files.
+- `git commit`: Commits any **staged** files. You'll also need to add a description of what you committed, so `git commit -m "Added new file."` would commit the file with the message "Added new file.".
 - `git push`: Uploads **committed** files to server (such as GitHub). You'd generally use `git push origin` here, which pushes the file back to the repo you cloned it from.
