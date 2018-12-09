@@ -1,6 +1,6 @@
 # Git for docs
 
-Git works on both text and binary files (images, video, audio, etc.), and treats both as the same. The difference is that binary files can be difficult to merge, and so Git won't even try and merge them (it'll just ask you to choose one over the other).
+Git works on both text and binary files (images, video, audio, etc.), and generally treats both as the same. The difference is that Git won't even try to merge binary files (it'll just ask you to choose one over the other).
 
 ## Git stages
 1. **Unstaged** - Local change to a file (or added or deleted the file). Use this when additions have been made, but you're unsure whether you want to use them yet. This is basically an unsaved file.
@@ -53,8 +53,6 @@ When there's a merge conflict you get a bunch of `<<<<<<<<<<` and `>>>>>>>>>>>` 
 2. `git add .` 
 3. `git commit -m "With a relevant message"`
 4. `git pull`
-
-Bam!
 
 ### Working with branches
 Once you've created a branch with `git branch new-branch`, you can switch to it with `git checkout new-branch`.
@@ -114,7 +112,7 @@ If you've made changes you don't want, you can remove them with `git reset --har
 2. `git reset --hard origin/remoteBranchName`
 
 ### A fallback option
-An 'unofficial' way to solve Git issues:
+One 'unofficial' way to solve Git issues:
 1. Copy changed files to a folder outside the repo.
 2. Revert changes back to a point where Git works again.
 3. Manually merge the changes back in.
@@ -124,3 +122,4 @@ An 'unofficial' way to solve Git issues:
 2. Delete the local repo.
 3. Clone the folder again, into a new folder.
 4. Manually merge the changes back.
+5. Go and drink some coffee.
