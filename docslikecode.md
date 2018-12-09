@@ -56,8 +56,6 @@ Bam!
 Once you've created a branch with `git branch new-branch`, you can switch to it with `git checkout new-branch`.
 **Note:** You'll need to commit all your changes before you can move to the new branch (or use `git stash`).
 
-When creating branches, you can use `/`s in the name. This is useful when using naming conventions like `version1/docs` (to distinguish, say, docs of a feature from the feature itself `version1/newfeature)`.
-
-The new branch won't be created remotely until you've used `git push`.
+When creating branches, you can use `/`s in the name. This is useful when you want to use naming conventions like `version1/docs` (to distinguish, say, the docs of a feature from the feature itself `version1/newfeature)`. The new branch will be created remotely when you use `git push`.
 
 To delete, use `git branch -d branch-name`. You should only really do this once you've merged the branch.
