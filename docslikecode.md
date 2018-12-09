@@ -14,9 +14,10 @@ Git works on both text and binary files (images, video, audio, etc.), and treats
 - `git commit`: Commits any **staged** files. You'll also need to add a description of what you committed, so `git commit -m "Added new file."` would commit the file with the message "Added new file.".
 - `git push`: Uploads **committed** files to server (such as GitHub). You'd generally use `git push origin` here, which pushes the file back to the repo you cloned it from.
 - `git log`: Shows you the history of git commits. For an easier to read version, there's `git log --oneline`.
-- `git checkout`: Lets you choose which commit you want to work on. Fow example, to work on the most recent version on the `master` branch you'd use `git checkout master`.
+- `git checkout`: Lets you choose which commit or branch you want to work on. Fow example, to work on the most recent version on the `master` branch you'd use `git checkout master`.
 - `git tag`: Can be used by itself to see a list of all tags that have been made, or in combination with some arguments to tag a commit (`git tag -a tag_name -m "Description for the tag"`).
 - `git pull`: Pulls all the commits that have been made to the repository. You can *only* use this if you have committed your files.
+- `git branch`: Can be used by itself to list branches, or with an argument to create a new branch (when doing this, it won't automatically move you to that branch). 
 
 ## Doing stuff in Git
 
@@ -43,4 +44,20 @@ There are three ways in which a pull is handled:
 **Note:** Remember that you can *only* use `git pull` if you have committed your files.
 
 ### Resolving merge conflicts
-When there's a merge conflict you get a bunch of <<<<<<<<< and >>>>>>>>>> markup that corresponds to the conflict. To resolve this, update the file locally, then use `git add .`, then `git commit -m "With a relevant message"`, and finally 
+When there's a merge conflict you get a bunch of `<<<<<<<<<<` and `>>>>>>>>>>>` markup that corresponds to where the conflict occurs. To resolve this: 
+1. Update the file locally.
+2. `git add .` 
+3. `git commit -m "With a relevant message"`
+4. `git pull`
+
+Bam!
+
+### Working with branches
+Once you've created a branch with `git branch new-branch`, you can switch to it with `git checkout new-branch`.
+**Note:** You'll need to commit all your changes before you can move to the new branch (or use `git stash`).
+
+When creating branches, you can use `/`s in the name. This is useful when using naming conventions like `version1/docs` (to distinguish, say, docs of a feature from the feature itself `version1/newfeature)`.
+
+The new branch won't be created remotely until you've used `git push`.
+
+To delete, use `git branch -d branch-name`. You should only really do this once you've merged the branch.
