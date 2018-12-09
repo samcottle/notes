@@ -1,6 +1,6 @@
 # Git for docs
 
-Git works on both text and binary files (images, video, audio, etc.), and generally treats both as the same. The difference is that Git won't even try to merge binary files (it'll just ask you to choose one over the other).
+Git works on both text and binary files (images, video, audio, etc.), and generally treats both as the same. It's not great at merging binary files, though, so will just ask you to choose one over the other.
 
 ## Git stages
 1. **Unstaged** - Local change to a file (or added or deleted the file). Use this when additions have been made, but you're unsure whether you want to use them yet. This is basically an unsaved file.
