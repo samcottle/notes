@@ -74,6 +74,37 @@ Easiest to do this using a GUI tool (GitHub, etc), by creating a pull request. T
 
 Can also be done using the command line using the commands `git diff` and `git merge`.
 
+### Ignoring files
+To exclude any build files from being committed to Git:
+1. Create a file called `.gitignore` in the top level of the repo. 
+2. In this file, list any files or folders you want Git to ignore.
+3. Add the file to the repo and commit it.
+
+#### Example `.gitignore` file
+```
+# Comments start with a #, and use the format:
+folder/file.md 
+
+# A * can be used as a wildcard. So to ignore all .txt files:
+*.txt
+
+# To ignore an entire folder:
+folder/
+``` 
+
+### Forking
+This is like branching an entire repo, so you can play with changes without impacting the original project. Changes can then be merged back from the fork to the original repo. It's basically a way of allowing anyone to make changes to an open source project.
+
+**Note:** Forking is a feature of GitHub (or similar tool), not of Git.
+
+To fork in GitHub:
+1. Go to the project.
+2. Click the **Fork** button.
+
+Then, once you've made the changes you want to merge with the original repo:
+1. Click **Create pull request**.
+2. Follow the instructions.
+
 ## Troubleshooting
 ### Resetting back to the last unstaged changes
 If you've made changes you don't want, you can remove them with `git reset --hard`.
