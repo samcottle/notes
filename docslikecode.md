@@ -18,6 +18,7 @@ Git works on both text and binary files (images, video, audio, etc.), and treats
 - `git tag`: Can be used by itself to see a list of all tags that have been made, or in combination with some arguments to tag a commit (`git tag -a tag_name -m "Description for the tag"`).
 - `git pull`: Pulls all the commits that have been made to the repository. You can *only* use this if you have committed your files.
 - `git branch`: Can be used by itself to list branches, or with an argument to create a new branch (when doing this, it won't automatically move you to that branch). 
+- `git stash`: Creates a new stash, and reverts to the latest commit. Can use the `list` argument to list all the most recent stashes, and the `pop` argument restores the most recent changes.
 
 ## Doing stuff in Git
 
@@ -59,3 +60,11 @@ Once you've created a branch with `git branch new-branch`, you can switch to it 
 When creating branches, you can use `/`s in the name. This is useful when you want to use naming conventions like `version1/docs` (to distinguish, say, the docs of a feature from the feature itself `version1/newfeature)`. The new branch will be created remotely when you use `git push`.
 
 To delete, use `git branch -d branch-name`. You should only really do this once you've merged the branch.
+
+### Using stash
+Is how you "stash" changes if you're not ready to commit yet. You can resume working on a stash by "popping" it. They don't typically use names, but you can add them with `git stash save "stash-name"`. 
+
+### Merging branches
+Easiest to do this using a GUI tool (GitHub, etc), by creating a pull request. The two ways to do this:
+1. Merge pull request: Every commit on the new branch becomes a commit on the original branch (i.e. Master).
+2. Squash and merge pull request: Simplifies the history by *squashing* down all the commits on the new branch into one commit on the original branch (i.e. Master).
