@@ -31,4 +31,8 @@ By checking out a previous version with `git checkout previous_checkout_hash`, y
 **Note:** Don't go back to a previous version and make changes to that. It'll often create nothing but a mess.
 
 ### Tagging files
+<<<<<<< HEAD
 This is commonly used to label a commit as a release. It's used to make a commit easier to find. To checkout a commit with a tag, you'd use `git checkout tags/tag_name`. If using a GitHub (or another GUI-based Git tool), this you can find a tagged release in the **Tags** tab (which is hidden under **Branches**).
+=======
+This is commonly used to label a commit as a release. It's used to make a commit easier to find. To checkout a commit with a tag, you'd use `git checkout tags/tag_name`. If using a GitHub (or another GUI-based Git tool), this you can find a tagged release in the **Tags** tab (which is hidden under **Branches**).
+>>>>>>> 3f94c4ac802178cfa212edcc6169f113e4e022dd
