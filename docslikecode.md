@@ -19,6 +19,8 @@ Git works on both text and binary files (images, video, audio, etc.), and treats
 - `git pull`: Pulls all the commits that have been made to the repository. You can *only* use this if you have committed your files.
 - `git branch`: Can be used by itself to list branches, or with an argument to create a new branch (when doing this, it won't automatically move you to that branch). 
 - `git stash`: Creates a new stash, and reverts to the latest commit. Can use the `list` argument to list all the most recent stashes, and the `pop` argument restores the most recent changes.
+- `git diff`: Compared two branches, for example `git diff branch-a branch-b`.
+- `get merge`: First, change to the branch you want to merge into. Then, merge the branch you want to add. For example, if you're in `branch-a` and want to merge your changes from `branch-b` use `git merge branch-b`. 
 
 ## Doing stuff in Git
 
@@ -65,6 +67,8 @@ To delete, use `git branch -d branch-name`. You should only really do this once 
 Is how you "stash" changes if you're not ready to commit yet. You can resume working on a stash by "popping" it. They don't typically use names, but you can add them with `git stash save "stash-name"`. 
 
 ### Merging branches
-Easiest to do this using a GUI tool (GitHub, etc), by creating a pull request. The two ways to do this:
+Easiest to do this using a GUI tool (GitHub, etc), by creating a pull request. The two ways to do this using a GUI:
 1. Merge pull request: Every commit on the new branch becomes a commit on the original branch (i.e. Master).
 2. Squash and merge pull request: Simplifies the history by *squashing* down all the commits on the new branch into one commit on the original branch (i.e. Master).
+
+Can also be done using the command line using the commands `git diff` and `git merge`.
