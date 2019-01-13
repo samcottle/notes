@@ -1,4 +1,9 @@
-# docslikecode
-I created this repo as I was working through the excellent [*Git and GitHub for writers* course on Udemy](https://www.udemy.com/git-and-github-for-writers/).
+# Notes
+These are my notes and personal cheat-sheets, created when I'm learning a new topic or skill. 
 
-This is basically my personal cheat-sheet on Git and its commands.
+I've written them for my own personal use, and are by no means a complete *Guide to x*.
+
+That being said, if you find any of them useful, please feel free to use them.
+
+Cheers,
+Sam
