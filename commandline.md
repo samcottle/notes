@@ -33,10 +33,10 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/sbin`: Contains system binaries, which are used to perform important system tasks. This folder is off limits to anyone but the `superuser`.
 - `/tmp`: Contains temporary files. This is often emptied with each reboot.
 - `/usr`: Contains all the program and support files availabe to regular users:
-..- `/usr/bin`: The binary files available to all regular users.
-..- `/usr/local`: The binary files that did not come with the distro.
-..- `/usr/sbin`: System binaries.
-..- `/usr/share`: Shared data used by the binaries in `/usr/bin`.
-..- `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
+  - `/usr/bin`: The binary files available to all regular users.
+  - `/usr/local`: The binary files that did not come with the distro.
+  - `/usr/sbin`: System binaries.
+  - `/usr/share`: Shared data used by the binaries in `/usr/bin`.
+  - `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
