@@ -57,4 +57,11 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
 - `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
-- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description, like `list directory contents`.
+- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
+
+
+## Raspberry Pi
+
+### VNC
+- `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
+- `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
