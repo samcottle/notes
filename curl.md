@@ -22,3 +22,6 @@
 
 ## Basic DELETE requests
 - `curl -X DELETE https://exampleurl.com/posts/4`: Deletes the data at `https://exampleurl.com/posts/4`.
+
+## Testing
+To experiment with any of these commands (without the risk of doing something horrendous) use the endpoints listed on https://jsonplaceholder.typicode.com/
