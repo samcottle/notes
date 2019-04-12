@@ -7,8 +7,9 @@
 - `file`: Determine the contents of a specified file. `file me.jpg` would return `JPEG image data. JFIF standard 1.01.`, for example.
 - `mkdir`: Make a new directory. `mkdir newfolder` mwould make a new directory called `newfolder`. Can make multiple new directories by specifying more than one after `mkdir`. For example `mkdir newfolder1 newfolder2` would create two new directories: `newfolder1` and `newfolder2`.
 - `cp`: Copies a file or folder. `cp file1 file2` would make a copy of `file1` and call it `file2`. `cp file1 /folder1` would make a copy of `file1` in `folder1`.
-- `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`. 
+- `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
+- `shutdown`: Shuts down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
 ### Using wildcards
 The most commonly used wildcards are:
@@ -24,7 +25,7 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/bin`: Contains binaries that are needed for the system to run.
 - `/boot`: Contains the files needed to boot. Includes `/boot/grub/grub.conf` (the boot loader), and `/boot/vmlinuz` (the Linux kernel).
 - `/dev`: Contains a list of all the devices that Linux understands.
-- `/etc`: Contains systemwide configuration files and shell scripts. Includes `/etc/crontab` (used for running automated jobs), and `etc/fstab` (the table of strage devices). 
+- `/etc`: Contains systemwide configuration files and shell scripts. Includes `/etc/crontab` (used for running automated jobs), and `etc/fstab` (the table of strage devices).
 - `/lib`: Contains shared library files used by system programs.
 - `/media`: Contains mount points for removable media.
 - `/mnt`: Contains mount points removable media that were manually mounted. This is typically used on older Linux systems.
@@ -42,7 +43,7 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
 
 ### Using `alias` to create commands
-This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like: 
+This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
 `alias myAlias='cd ..; mkdir new; ls'`
 
 Now we can use the command `myAlias` to invoke those three commands.
