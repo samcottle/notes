@@ -60,6 +60,10 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
+## Verifying a Checksum
+- `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
+- `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
+- `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
 
 ## Raspberry Pi
 
