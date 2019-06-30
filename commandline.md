@@ -18,7 +18,41 @@ The most commonly used wildcards are:
 - `[characters]`: Any of the characters specified between the square brackets.
 - `[!characters]`: Any characters that is not specified between the square brackets.
 
-### Useful directories
+### Getting help
+The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
+- `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
+- `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
+- `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
+- `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
+- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
+
+## Verifying a Checksum
+- `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
+- `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
+- `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
+
+## Using `apt`
+Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
+- `apt update`: Checks for updates to installed packages.
+- `apt upgrade`: Updates (or *upgrades*) installed packages.
+- `apt dist-upgrade`: Updates installed packages, including kernel packages.
+- `apt search package_name`: Searches for a specified package. For example `apt search hugo` returns a list of available packages containing `hugo`.
+- `apt install package_name`: Installs a specified package. For example `sudo apt install hugo` installs the package `hugo`.
+- `apt remove package_name`: Removes an installed package (but leaves the configuration files). For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
+- `apt purge package_name`: Removes everything related to an installed package (think of it as `remove` + deletes configuration files).
+- `apt autoremove`: Removes any dependencies (i.e. libraries and packages) that are no longer required.
+
+## Using an `alias` to create commands
+This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
+`alias myAlias='cd ..; mkdir new; ls'`
+
+Now we can use the command `myAlias` to invoke those three commands.
+
+**Tip**: Use the `type` command (i.e. `type myAlias`) for info on an alias you've defined.
+
+**Note**: Before creating an alias, check whether it's already in use by an installed program. An easy way to do this is using the `type` command. So `type myAlias` will either return information on what type of file `myAlias` is (you probably shouldn't create an alias with this name, unless you want to overwrite it), or `not found` (it's fair game).
+
+## Useful directories
 Useful directories within a 'standard' Linux filesystem include:
 - `/`: The root directory.
 - `/home`: The user's home directory.
@@ -41,40 +75,6 @@ Useful directories within a 'standard' Linux filesystem include:
   - `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
-
-### Using `apt`
-Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
-- `apt update`: Checks for updates to installed packages.
-- `apt upgrade`: Updates (or *upgrades*) installed packages.
-- `apt dist-upgrade`: Updates installed packages, including kernel packages.
-- `apt search package_name`: Searches for a specified package. For example `apt search hugo` returns a list of available packages containing `hugo`.
-- `apt install package_name`: Installs a specified package. For example `sudo apt install hugo` installs the package `hugo`.
-- `apt remove package_name`: Removes an installed package (but leaves the configuration files). For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
-- `apt purge package_name`: Removes everything related to an installed package (think of it as `remove` + deletes configuration files).
-- `apt autoremove`: Removes any dependencies (i.e. libraries and packages) that are no longer required.
-
-### Using an `alias` to create commands
-This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
-`alias myAlias='cd ..; mkdir new; ls'`
-
-Now we can use the command `myAlias` to invoke those three commands.
-
-**Tip**: Use the `type` command (i.e. `type myAlias`) for info on an alias you've defined.
-
-**Note**: Before creating an alias, check whether it's already in use by an installed program. An easy way to do this is using the `type` command. So `type myAlias` will either return information on what type of file `myAlias` is (you probably shouldn't create an alias with this name, unless you want to overwrite it), or `not found` (it's fair game).
-
-### Getting help
-The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
-- `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
-- `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
-- `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
-- `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
-- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
-
-### Verifying a Checksum
-- `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
-- `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
-- `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
 
 ## Raspberry Pi
 
