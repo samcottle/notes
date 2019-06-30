@@ -42,7 +42,16 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
 
-### Using `alias` to create commands
+### Using `apt`
+Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
+- `apt update`: Checks for updates to installed packages.
+- `apt upgrade`: Updates (or *upgrades*) installed packages.
+- `apt dist-upgrade`: Updates installed packages, including kernel packages.
+- `apt search package_name`: Searches for a specified package. For example `apt search hugo` returns a list of available packages containing `hugo`.
+- `apt install package_name`: Installs a specified package. For example `sudo apt install hugo` installs the package `hugo`.
+- `apt remove package_name`: Removes an installed package. For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
+
+### Using an `alias` to create commands
 This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
 `alias myAlias='cd ..; mkdir new; ls'`
 
@@ -60,7 +69,7 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
-## Verifying a Checksum
+### Verifying a Checksum
 - `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
 - `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
 - `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
