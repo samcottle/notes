@@ -49,7 +49,9 @@ Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
 - `apt dist-upgrade`: Updates installed packages, including kernel packages.
 - `apt search package_name`: Searches for a specified package. For example `apt search hugo` returns a list of available packages containing `hugo`.
 - `apt install package_name`: Installs a specified package. For example `sudo apt install hugo` installs the package `hugo`.
-- `apt remove package_name`: Removes an installed package. For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
+- `apt remove package_name`: Removes an installed package (but leaves the configuration files). For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
+- `apt purge package_name`: Removes everything related to an installed package (think of it as `remove` + deletes configuration files).
+- `apt autoremove`: Removes any dependencies (i.e. libraries and packages) that are no longer required.
 
 ### Using an `alias` to create commands
 This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
