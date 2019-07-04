@@ -1,2 +1,0 @@
-# Lynda.com JavaScript challenges
-
