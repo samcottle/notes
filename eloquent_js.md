@@ -5,8 +5,8 @@ Exercises from the book [Eloquent JavaScript](https://eloquentjavascript.net/), 
 ## Program Structure
 
 ### Looping a triangle
-Write a loop that makes seven calls to console.log to output the following triangle:
-
+Write a loop that makes seven calls to `console.log` to output the following triangle:
+```
 #
 ##
 ###
@@ -14,6 +14,7 @@ Write a loop that makes seven calls to console.log to output the following trian
 #####
 ######
 #######
+```
 
 My answer:
 ```js
