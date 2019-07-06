@@ -16,7 +16,7 @@ Write a loop that makes seven calls to `console.log` to output the following tri
 #######
 ```
 
-My answer:
+##### My answer
 ```js
 let number = 0;
 let hash = "#";
@@ -28,7 +28,7 @@ while (number <= 7) {
 }
 ```
 
-Official answer:
+##### Official answer
 ```js
 
 ```
