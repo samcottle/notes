@@ -52,6 +52,28 @@ Now we can use the command `myAlias` to invoke those three commands.
 
 **Note**: Before creating an alias, check whether it's already in use by an installed program. An easy way to do this is using the `type` command. So `type myAlias` will either return information on what type of file `myAlias` is (you probably shouldn't create an alias with this name, unless you want to overwrite it), or `not found` (it's fair game).
 
+### Using redirection
+The `>` operator is used to *redirect* output from a command to a file. For example, to redirect the output of the `ls -l` command to a file called `list.txt` you would use:
+`ls -l > list.txt`.
+
+This can be combined with the following commands:
+- `cat`: Concatenates (or combines) multiple files into one. For example, to combine the files `movie.mp4.01`, `movie.mp4.02`, and `movie.mp4.03` into one file called `movie.mp4` you would use `cat movie.mp4.0* > movie.mp4` (with `*` being a wildcard).
+  - `cat` can also be used to create small text files, for example `cat > textfile.txt` would then give you the opportunity to enter some text. **Ctrl + c** will output this text to a file.
+
+### Pipelining
+The pipe operator, or `|`, is used to pipe the output of one command into another. This can be used to chain multiple commands together.
+
+Here are some commands you can do this with:
+- `less`: This is used to display information in the teminal, one page at a time. Using pipelining, this can be used in combination with, for example, `ls` to display the contents of a large directory one page at a time, with `ls -l /usr/bin | less`.
+- `sort`: Unsurprisingly, this sorts information. So if you wanted to list the contents of two directories, `/bin` and `/usr/bin`, and combine the output in a sorted list, displayed one page at a time, you would use `ls /bin /usr/bin | sort | less`.
+- `uniq`: Removes (or lists) all duplicates. For example, `ls /bin /usr/bin | sort | uniq | less` is the same as above, but all the duplicated file names are removed. You can also use `uniq` to list *only* the duplicates, with the `-d` option: `ls /bin /usr/bin | sort |uniq -d | less`.
+- `wc`: Counts the number of lines, words, and bytes in a file (or list). For example, to count the number of unique items in `/bin` and `/usr/bin` you could use `ls /bin /usr/bin | sort | uniq | wc -l` (**note**: the `-l` option limits the output to report lines only).
+- `grep`: Very powerful command, but in this case it can be used to match patterns in a file (a bit like a search). So to list all commands related to `zip` compression in the `/bin` and `/usr/bin` folders, you could use `ls /bin /usr/bin | sort | uniq | grep zip`.
+- `head` and `tail`: Get the first or last lines of a file or folder (by default, the first or last 10 lines). For example, to get the last `5` files of the `/usr/bin` folder you could use `ls /usr/bin | tail -n 5` (the `-n` option, followed by a number, prints that number of lines).
+  - `tail` can also be used to view file changes in real time, with the `-f` option (and you may need to be in superuser-mode to run this command). For example, `sudo tail -f /var/log/messages` monitors changes to this file (until you stop with **Ctrl + c**).
+- `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
+
+
 ## Useful directories
 Useful directories within a 'standard' Linux filesystem include:
 - `/`: The root directory.
