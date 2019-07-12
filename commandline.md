@@ -1,6 +1,4 @@
-# Linux command line
-
-## Basic commands
+# Basic Linux commands
 - `cd`: Change the working directory. `cd folder1` would change you to the working directory with the name `folder1`.
 - `ls`: List the files in a directory. For more information (such as permissions) on each of the files in the directory, use `ls -l`.
 - `pwd`: Print working directory. Returns the name of the working directory (i.e. the one you're in).
@@ -11,14 +9,14 @@
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
 - `shutdown`: Shuts down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
-### Using wildcards
+## Using wildcards
 The most commonly used wildcards are:
 - `*`: Any characters. For example, `g*` would match any files beginning with `g`. **Note**: A `*` by itself would match all files.
 - `?`: Any single character. For example, `g?.txt` would match any files starting with `g` followed by any one character, followed by `.txt`.
 - `[characters]`: Any of the characters specified between the square brackets.
 - `[!characters]`: Any characters that is not specified between the square brackets.
 
-### Getting help
+## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
 - `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
 - `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
@@ -74,7 +72,7 @@ Here are some commands you can do this with:
 - `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
 
 
-## Useful directories
+# Useful directories
 Useful directories within a 'standard' Linux filesystem include:
 - `/`: The root directory.
 - `/home`: The user's home directory.
@@ -98,8 +96,8 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
 
-## Raspberry Pi
+# Raspberry Pi
 
-### VNC
+## VNC
 - `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
 - `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
