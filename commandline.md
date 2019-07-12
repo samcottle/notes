@@ -52,7 +52,7 @@ Now we can use the command `myAlias` to invoke those three commands.
 
 **Note**: Before creating an alias, check whether it's already in use by an installed program. An easy way to do this is using the `type` command. So `type myAlias` will either return information on what type of file `myAlias` is (you probably shouldn't create an alias with this name, unless you want to overwrite it), or `not found` (it's fair game).
 
-### Using redirection
+## Using redirection
 The `>` operator is used to *redirect* output from a command to a file. For example, to redirect the output of the `ls -l` command to a file called `list.txt` you would use:
 `ls -l > list.txt`.
 
@@ -60,7 +60,7 @@ This can be combined with the following commands:
 - `cat`: Concatenates (or combines) multiple files into one. For example, to combine the files `movie.mp4.01`, `movie.mp4.02`, and `movie.mp4.03` into one file called `movie.mp4` you would use `cat movie.mp4.0* > movie.mp4` (with `*` being a wildcard).
   - `cat` can also be used to create small text files, for example `cat > textfile.txt` would then give you the opportunity to enter some text. **Ctrl + c** will output this text to a file.
 
-### Pipelining
+## Using pipelining
 The pipe operator, or `|`, is used to pipe the output of one command into another. This can be used to chain multiple commands together.
 
 Here are some commands you can do this with:
