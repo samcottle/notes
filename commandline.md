@@ -57,6 +57,7 @@ The `>` operator is used to *redirect* output from a command to a file. For exam
 This can be combined with the following commands:
 - `cat`: Concatenates (or combines) multiple files into one. For example, to combine the files `movie.mp4.01`, `movie.mp4.02`, and `movie.mp4.03` into one file called `movie.mp4` you would use `cat movie.mp4.0* > movie.mp4` (with `*` being a wildcard).
   - `cat` can also be used to create small text files, for example `cat > textfile.txt` would then give you the opportunity to enter some text. **Ctrl + c** will output this text to a file.
+  - `cat` can also be used to print the contents of files to the terminal. For example `cat textfile.txt.` would display the contents of `textfile.txt`.
 
 ## Using pipelining
 The pipe operator, or `|`, is used to pipe the output of one command into another. This can be used to chain multiple commands together.
