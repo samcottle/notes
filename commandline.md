@@ -7,6 +7,7 @@
 - `cp`: Copies a file or folder. `cp file1 file2` would make a copy of `file1` and call it `file2`. `cp file1 /folder1` would make a copy of `file1` in `folder1`.
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
+- `echo`: Displays text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
 - `shutdown`: Shuts down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
 ## Using wildcards
