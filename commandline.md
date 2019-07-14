@@ -4,11 +4,11 @@
 - `pwd`: Print working directory. Returns the name of the working directory (i.e. the one you're in).
 - `file`: Determine the contents of a specified file. `file me.jpg` would return `JPEG image data. JFIF standard 1.01.`, for example.
 - `mkdir`: Make a new directory. `mkdir newfolder` mwould make a new directory called `newfolder`. Can make multiple new directories by specifying more than one after `mkdir`. For example `mkdir newfolder1 newfolder2` would create two new directories: `newfolder1` and `newfolder2`.
-- `cp`: Copies a file or folder. `cp file1 file2` would make a copy of `file1` and call it `file2`. `cp file1 /folder1` would make a copy of `file1` in `folder1`.
+- `cp`: Copy a file or folder. `cp file1 file2` would make a copy of `file1` and call it `file2`. `cp file1 /folder1` would make a copy of `file1` in `folder1`.
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
-- `echo`: Displays text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
-- `shutdown`: Shuts down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
+- `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
+- `shutdown`: Shut down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
 ## Using wildcards
 The most commonly used wildcards are:
