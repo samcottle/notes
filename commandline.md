@@ -12,6 +12,14 @@
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
+## Getting help
+The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
+- `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
+- `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
+- `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
+- `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
+- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
+
 ## Using wildcards
 The most commonly used wildcards are:
 - `*`: Any characters. For example, `g*` would match any files beginning with `g`. **Note**: A `*` by itself would match all files.
@@ -58,15 +66,6 @@ Using the command `echo The total is $100` displays `The total is 00` (because `
 - Escape character: A `\` will suppress a single character. This is often used to:
   - Suppress one character within a string of double quotes: `echo "The balance of $USER is: \$5.00"`.
   - Prevent accidental expansion in poorly named files: `rn bad\&filename.txt good_filename.txt`.
-  Here are some other
-
-## Getting help
-The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
-- `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
-- `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
-- `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
-- `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
-- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
 ## Verifying a Checksum
 - `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
