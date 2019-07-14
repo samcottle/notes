@@ -115,6 +115,10 @@ Here are some commands you can do this with:
   - `tail` can also be used to view file changes in real time, with the `-f` option (and you may need to be in superuser-mode to run this command). For example, `sudo tail -f /var/log/messages` monitors changes to this file (until you stop with **Ctrl + c**).
 - `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
 
+## Using the VNC server
+- `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
+- `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
+
 # Useful directories
 Useful directories within a 'standard' Linux filesystem include:
 - `/`: The root directory.
@@ -138,9 +142,3 @@ Useful directories within a 'standard' Linux filesystem include:
   - `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
-
-# Raspberry Pi
-
-## VNC
-- `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
-- `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
