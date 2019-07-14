@@ -1,6 +1,6 @@
 # Basic Linux commands
 - `cd`: Change the working directory. `cd folder1` would change you to the working directory with the name `folder1`.
-- `ls`: List the files in a directory. For more information (such as permissions) on each of the files in the directory, use `ls -l`.
+- `ls`: List the files in a directory. For more information (such as permissions) on each of the files in the directory, use `ls -l`. To list all files, including hidden files, use `ls -a`.
 - `pwd`: Print working directory. Returns the name of the working directory (i.e. the one you're in).
 - `file`: Determine the contents of a specified file. `file me.jpg` would return `JPEG image data. JFIF standard 1.01.`, for example.
 - `mkdir`: Make a new directory. `mkdir newfolder` mwould make a new directory called `newfolder`. Can make multiple new directories by specifying more than one after `mkdir`. For example `mkdir newfolder1 newfolder2` would create two new directories: `newfolder1` and `newfolder2`.
