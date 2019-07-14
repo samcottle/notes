@@ -16,7 +16,16 @@ The most commonly used wildcards are:
 - `?`: Any single character. For example, `g?.txt` would match any files starting with `g` followed by any one character, followed by `.txt`.
 - `[characters]`: Any of the characters specified between the square brackets.
 - `[!characters]`: Any characters that is not specified between the square brackets.
-- `~`: Home directory. For example, `echo ~` would print the user's home directory. Instead of `cd /home/user/folder`, you can use the more concise `cd ~/folder`. 
+- `~`: Home directory. For example, `echo ~` would print the user's home directory. Instead of `cd /home/user/folder`, you can use the more concise `cd ~/folder`.
+
+## Using expansion
+### Brace expansion
+Brace expansion (`{}`) can be used as a sort of wildcard. For example, to display the letters between *a* and *r* you can use `echo {a..r}`.
+
+This can be really useful if you need to create, for example, multiple folders that use a similar format. Instead of manually creating a folder to store files for each month of the years 2017 and 2019, you could use `mkdir {2017..2019}-0{1..9} {2017..2019}-{10..12}`.
+
+### Parameter expansion
+
 
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
@@ -73,7 +82,6 @@ Here are some commands you can do this with:
 - `head` and `tail`: Get the first or last lines of a file or folder (by default, the first or last 10 lines). For example, to get the last `5` files of the `/usr/bin` folder you could use `ls /usr/bin | tail -n 5` (the `-n` option, followed by a number, prints that number of lines).
   - `tail` can also be used to view file changes in real time, with the `-f` option (and you may need to be in superuser-mode to run this command). For example, `sudo tail -f /var/log/messages` monitors changes to this file (until you stop with **Ctrl + c**).
 - `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
-
 
 # Useful directories
 Useful directories within a 'standard' Linux filesystem include:
