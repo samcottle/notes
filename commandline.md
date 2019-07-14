@@ -16,6 +16,7 @@ The most commonly used wildcards are:
 - `?`: Any single character. For example, `g?.txt` would match any files starting with `g` followed by any one character, followed by `.txt`.
 - `[characters]`: Any of the characters specified between the square brackets.
 - `[!characters]`: Any characters that is not specified between the square brackets.
+- `~`: Home directory. For example, `echo ~` would print the user's home directory. Instead of `cd /home/user/folder`, you can use the more concise `cd ~/folder`. 
 
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
