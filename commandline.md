@@ -25,7 +25,7 @@ Brace expansion (`{}`) can be used as a sort of wildcard. For example, to displa
 This can be really useful if you need to create, for example, multiple folders that use a similar format. Instead of manually creating a folder to store files for each month of the years 2017 and 2019, you could use `mkdir {2017..2019}-0{1..9} {2017..2019}-{10..12}`.
 
 ### Parameter expansion
-
+Parameters can be used as a sort of wildcard in place of a username (i.e. `$USER`) and many other variables.
 
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
