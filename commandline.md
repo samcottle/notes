@@ -8,6 +8,8 @@
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
 - `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
+- `clear`: Clears the terminal.
+- `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
 
 ## Using wildcards
@@ -18,6 +20,28 @@ The most commonly used wildcards are:
 - `[!characters]`: Any characters that is not specified between the square brackets.
 - `~`: Home directory. For example, `echo ~` would print the user's home directory. Instead of `cd /home/user/folder`, you can use the more concise `cd ~/folder`.
 
+## Command line editing
+Apart from using the arrow keys to move the cursor you can use the following key combinations to interact with text.
+
+### Moving the cursor
+- **Ctrl + a**: Move cursor to the beginning of the line.
+- **Ctrl + e**: Move cursor to the end of the line.
+- **Alt + f**: Move cursor forward one word.
+- **Alt + b**: Move cursor back one word.
+- **Ctrl + l**: Clears the screen and puts the cursor in the top left.
+
+### Text editing
+- **Alt + t**: Swaps the word with the word preceding it.
+- **Alt + l**: Convert remainder of the word to lowercase.
+- **Alt + u**: Convert remainder of the word to uppercase.
+
+### Cutting and pasting
+- **Ctrl + k**: Cuts text between cursor and the end of the line.
+- **Ctrl + u**: Cuts text between cursor and the beginning of the line.
+- **Alt + d**: Cuts text between cursor and the end of the word.
+- **Alt + Backspace**: Cuts text between cursor and the end of the word.
+- **Ctrl + y**: Pastes text.
+
 ## Using expansion
 ### Brace expansion
 Brace expansion (`{}`) can be used as a sort of wildcard. For example, to display the letters between *a* and *r* you can use `echo {a..r}`.
@@ -26,6 +50,15 @@ This can be really useful if you need to create, for example, multiple folders t
 
 ### Parameter expansion
 Parameters can be used as a sort of wildcard in place of a username (i.e. `$USER`) and many other variables.
+
+### Using quotes to control expansion
+Using the command `echo The total is $100` displays `The total is 00` (because `$100` is interpreted as two things: the wildcard `$1`, and `00`). To avoid these kinds of scenario, you can use:
+- Double quotes: `"`s around text will suppress most special characters, such as word splitting, pathname expansion, tilde expansion, and brace expansion (but not a `$`, `/`, or back tick). Example: `mv "two words.txt" two_words.txt`.
+- Single quotes: `'`s around text will suppress all unwanted expansion. Example: `echo 'The total is $100'` would display `The total is $100`.
+- Escape character: A `\` will suppress a single character. This is often used to:
+  - Suppress one character within a string of double quotes: `echo "The balance of $USER is: \$5.00"`.
+  - Prevent accidental expansion in poorly named files: `rn bad\&filename.txt good_filename.txt`.
+  Here are some other
 
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
