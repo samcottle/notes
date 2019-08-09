@@ -22,12 +22,13 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
 ## Permissions
-These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `-rwxrw-r--` would translate into:
+These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `drwxrw-r--` would translate into:
 
 | File type | Owner permissions | Group permissions | World permissions |
-|:---------:|:-----------------:|:-----------------:|:-----------------:|
-| `-`       | `rwx`             | `rw-`             | `r--`             |
+|:----------|:------------------|:------------------|:------------------|
 | This is usually either a file (`-`), or directory (`d`). | What can the user that created the file/folder do. | What can a user in the same workgroup as the creator do. | What can any other user do. |
+| `d`       | `rwx`             | `rw-`             | `r--`             |
+| The file is a directory. | The user that created the file can read, write, and execute it (i.e. open the directory). | Other users in the same workgroup as the creator can read and write to the file, but **cannot** execute it. | Any other users can read the file (i.e. see that it exists). |
 
 ## Using wildcards
 The most commonly used wildcards are:
