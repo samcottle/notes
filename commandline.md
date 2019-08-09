@@ -8,7 +8,7 @@
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
 - `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
-- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. 
+- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`.
 - `clear`: Clears the terminal.
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
@@ -20,6 +20,14 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
+
+## Permissions
+These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `-rwxrw-r--` would translate into:
+
+| File type | Owner permissions | Group permissions | World permissions |
+|:---------:|:-----------------:|:-----------------:|:-----------------:|
+| **-**     | **rwx**           | **rw-**           | **r--**           |
+| This is usually either a file (`-`), or directory (`d`). | What can the user that created the file/folder do. | What can a user in the same workgroup as the creator do. | What can any other user do. |
 
 ## Using wildcards
 The most commonly used wildcards are:
