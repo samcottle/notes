@@ -26,7 +26,7 @@ These characters translate into attributes, such as the file type, and who can r
 
 | File type | Owner permissions | Group permissions | World permissions |
 |:---------:|:-----------------:|:-----------------:|:-----------------:|
-| **-**     | **rwx**           | **rw-**           | **r--**           |
+| `-`       | `rwx`             | `rw-`             | `r--`             |
 | This is usually either a file (`-`), or directory (`d`). | What can the user that created the file/folder do. | What can a user in the same workgroup as the creator do. | What can any other user do. |
 
 ## Using wildcards
