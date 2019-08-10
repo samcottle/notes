@@ -52,6 +52,31 @@ To change the owner of a file, use `chown`, followed by the name of the user and
 - `chown :admins` changes the owner to members of the group called `admins`.
 - `chown samcottle:admins` changes the owners to the user `samcottle` and members of the group called `admins`.
 
+## Processes
+A list of processes can be viewed with:
+- `ps`: Displays the processes associated with the current terminal session.
+- `ps x`: Displays the processes for all active terminal sessions.
+- `top`: Displays a dynamic list of processes. This is like the command line version of the Gnome **System Monitor** or macOS **Activity Monitor**. Press **Ctrl + c** to stop `top`.
+- `jobs`: Displays a list of processes running in the background.
+
+### Running processes in the background
+If a program is running in the terminal (i.e. you need to press **Ctrl + c** to use the terminal again), and you want to use the terminal for other commands, you can put and ampersand (` &`) after the command. This will run the task in the background.
+
+You can display a list of background processes with `jobs`. This also displays a number before to each process:
+```bash
+[1]-  Running                 xlogo &
+[2]+  Running                 gedit &
+```
+
+To bring a process to the foreground, use `fg` followed by a `%` + the job number of the process. For example, to bring `gedit` to the foreground, you'd use `fg %2`.
+
+You can also pause a running process, allowing you to move it to the background, with **Ctrl + z**.
+
+### Closing processes
+If you need to close a process use `kill`, followed by `%` + the job number of the process. For example, to close `xlogo` you would use `kill %1`.
+
+To close all instances of a process, use `killall` followed by the name of the process. For example, `killall gedit` would close all instances of `gedit` that are running.
+
 ## Using wildcards
 The most commonly used wildcards are:
 - `*`: Any characters. For example, `g*` would match any files beginning with `g`. **Note**: A `*` by itself would match all files.
