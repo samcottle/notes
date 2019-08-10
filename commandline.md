@@ -60,7 +60,7 @@ A list of processes can be viewed with:
 - `jobs`: Displays a list of processes running in the background.
 
 ### Running processes in the background
-If a program is running in the terminal (i.e. you need to press **Ctrl + c** to use the terminal again), and you want to use the terminal for other commands, you can put and ampersand (` &`) after the command. This will run the task in the background.
+If a program is running in the terminal (i.e. you need to press **Ctrl + c** to use the terminal again), and you want to use the terminal for other commands, you can run the task in the background. To do this add ` &` after the command. For example, `xlogo &` runs `xlogo` in the background.
 
 You can display a list of background processes with `jobs`. This also displays a number before to each process:
 ```bash
