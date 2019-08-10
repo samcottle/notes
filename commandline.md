@@ -22,11 +22,35 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
 ## Permissions
-These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `drwxrw-r--` would translate into:
+These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `drwxr-xr-x` would translate into:
+- `d`: The file type. This is usually either a file (`-`), or directory (`d`).
+- `rwx`: The owner permissions.
+- `r-x`: The group permissions.
+- `r-x`: The world permissions.
 
-| `d`       | `rwx`             | `rw-`             | `r--`             |
-|:----------|:------------------|:------------------|:------------------|
-| File type. This is usually either a file (`-`), or directory (`d`). | Owner permissions | Group permissions | World permissions |
+So for this example, the file is a folder, and anyone can see and enter (i.e. execute) it. Only the owner can make changes to the folder.
+
+### Changing permissions
+The user that created a file (or the superuser) is its owner. They are able to change its permissions, using the command `chmod` followed by three numbers. These numbers use octal (base 8) notation, and represent the following permissions:
+
+| Octal | Permissions |
+| :---- | :---------- |
+| 0     | `---`       |
+| 1     | `--x`       |
+| 2     | `-w-`       |
+| 3     | `-wx`       |
+| 4     | `r--`       |
+| 5     | `r-x`       |
+| 6     | `rw-`       |
+| 7     | `rwx`       |
+
+For example, to change permissions of a file to `drwxr-xr-x` you would use `chmod 755 file.txt`.
+
+### Changing ownership
+To change the owner of a file, use `chown`, followed by the name of the user and/or group that will become the new owner. For example:
+- `chown samcottle`: Changes the owner to the user `samcottle`.
+- `chown :admins`: Changes the owner to members of the group called `admins`.
+- `chown samcottle:admins` changes the owners to the user `samcottle` and members of the group called `admins`. 
 
 ## Using wildcards
 The most commonly used wildcards are:
