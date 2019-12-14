@@ -13,6 +13,10 @@
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
 
+## Logging
+- `last`: View history of successful login attempts.
+- `lastb`: View history of bad login attempts.
+
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
 - `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
