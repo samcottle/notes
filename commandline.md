@@ -11,7 +11,7 @@
 - `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`.
 - `clear`: Clears the terminal.
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
-- `shutdown`: Shut down the computer. `sudo shutdown -h now` would shutdown the computer immediately (i.e. `now`).
+- `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
 
 ## Getting help
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
