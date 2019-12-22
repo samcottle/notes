@@ -23,7 +23,7 @@
 
 The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
 
-- `help`: Gets help information for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
+- `help`: Gets help for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
 - `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
 - `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
