@@ -155,6 +155,8 @@ Using the command `echo The total is $100` displays `The total is 00` (because `
 
 ## Verifying a Checksum
 
+Three common commands to get the Checksum of a file are:
+
 - `md5sum`: Checks the MD5 Checksum of a file. For example `md5sum test.txt` would print the MD5 Checksum for the file `test.txt`.
 - `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
 - `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
