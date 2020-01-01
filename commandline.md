@@ -161,6 +161,12 @@ Three common commands to get the Checksum of a file are:
 - `sha1sum`: Checks the SHA-1 Checksum of a file. For example `sha1sum test.txt` would print the SHA-1 Checksum for the file `test.txt`.
 - `sha256sum`: Checks the SHA-256 Checksum of a file. For example `sha256sum test.txt` would print the SHA-256 Checksum for the file `test.txt`.
 
+### Changing a Checksum
+
+To alter a file's Checksum:
+
+- `truncate`: Appends data to the end of a file. For example `truncate -s +10 test.txt` would add 10 bytes of data to the end of the file.
+
 ## Using `apt`
 
 Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
