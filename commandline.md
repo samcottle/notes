@@ -224,6 +224,12 @@ If you want to start or stop the VNC server from the command line:
 - `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
 - `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
 
+## Using Hugo
+
+- `hugo new posts/new-post.md`: Creates a new post called **new-post.md**.
+- `hugo server -D`: Starts a [localhost](http://localhost:1313/) server with your site, including any draft posts.
+- `hugo -D`: Build static site. This site can be deployed to a production web server.
+
 ## Useful directories
 
 Useful directories within a 'standard' Linux filesystem include:
