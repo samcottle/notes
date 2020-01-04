@@ -226,6 +226,8 @@ If you want to start or stop the VNC server from the command line:
 
 ## Using Hugo
 
+Common commands for the [Hugo static site generator](https://www.gohugo.io/):
+
 - `hugo new posts/new-post.md`: Creates a new post called **new-post.md**.
 - `hugo server -D`: Starts a [localhost](http://localhost:1313/) server with your site, including any draft posts.
 - `hugo -D`: Build static site. This site can be deployed to a production web server.
