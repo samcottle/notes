@@ -9,10 +9,17 @@
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
 - `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
-- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`.
 - `clear`: Clears the terminal.
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
+
+## Finding stuff
+
+There are several commands that can be used for finding files:
+
+- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. To find files in a specific folder (such as all `.conf` files in the folder `/etc`), you would use `find /etc -name *.conf`.
+- `whereis`: Finds a binary file. `whereis ls` would display the location of the `ls` command.
+
 
 ## Logging
 
