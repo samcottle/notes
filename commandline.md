@@ -20,7 +20,6 @@ There are several commands that can be used for finding files:
 - `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. To find files in a specific folder (such as all `.conf` files in the folder `/etc`), you would use `find /etc -name *.conf`.
 - `whereis`: Finds a binary file. `whereis ls` would display the location of the `ls` command.
 
-
 ## Logging
 
 - `last`: View history of successful login attempts.
