@@ -33,7 +33,9 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
 - `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
+
     For more user-friendly man pages, you can use curl to get online cheat sheets for popular linux commands. For example, `curl cheat.sh/grep` would get you information and examples for the `grep` command.
+
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
 ## Permissions
