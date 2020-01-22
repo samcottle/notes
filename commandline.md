@@ -220,7 +220,8 @@ Here are some commands you can do this with:
 - `sort`: Unsurprisingly, this sorts information. So if you wanted to list the contents of two directories, `/bin` and `/usr/bin`, and combine the output in a sorted list, displayed one page at a time, you would use `ls /bin /usr/bin | sort | less`.
 - `uniq`: Removes (or lists) all duplicates. For example, `ls /bin /usr/bin | sort | uniq | less` is the same as above, but all the duplicated file names are removed. You can also use `uniq` to list *only* the duplicates, with the `-d` option: `ls /bin /usr/bin | sort |uniq -d | less`.
 - `wc`: Counts the number of lines, words, and bytes in a file (or list). For example, to count the number of unique items in `/bin` and `/usr/bin` you could use `ls /bin /usr/bin | sort | uniq | wc -l` (**note**: the `-l` option limits the output to report lines only).
-- `grep`: Very powerful command, but in this case it can be used to match patterns in a file (a bit like a search, or a filter). So to list all commands related to `zip` compression in the `/bin` and `/usr/bin` folders, you could use `ls /bin /usr/bin | sort | uniq | grep zip`.
+- `
+`: Very powerful command, but in this case it can be used to match patterns in a file (a bit like a search, or a filter). So to list all commands related to `zip` compression in the `/bin` and `/usr/bin` folders, you could use `ls /bin /usr/bin | sort | uniq | grep zip`.
 - `head` and `tail`: Get the first or last lines of a file or folder (by default, the first or last 10 lines). For example, to get the last `5` files of the `/usr/bin` folder you could use `ls /usr/bin | tail -n 5` (the `-n` option, followed by a number, prints that number of lines).
   - `tail` can also be used to view file changes in real time, with the `-f` option (and you may need to be in superuser-mode to run this command). For example, `sudo tail -f /var/log/messages` monitors changes to this file (until you stop with **Ctrl + c**).
 - `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
@@ -233,7 +234,7 @@ Here are some commands you can do this with:
 - `nl`: Similar to `cat`, but uses numbered lines. For example, to display the contents of `file.txt` with numbered lines you'd use `nl file.txt`.
 - `more`: Displays a file in pages (similar to `man` pages). For example, `more file.txt`.
 - `less`: Essentially `more` with *more* functionality (counter intuitively). For example, `less file.txt`. From here, you can search within the file with the **/** key.
-- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`.
+- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`. To do a case *insensitive* filter, use the `-i` flag.
 - `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
 
 ## Networking
