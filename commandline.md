@@ -35,6 +35,8 @@ The commands for getting help aren't standardised, but generally speaking you ca
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information.
 - `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
+For more user-friendly man pages, you can use curl to get online cheat sheets for popular linux commands. For example, `curl cheat.sh/grep` would get you information and examples for the `grep` command.
+
 ## Permissions
 
 These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `drwxr-xr--` would translate into:
