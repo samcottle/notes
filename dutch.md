@@ -79,7 +79,11 @@ Many Dutch words are often used quite differently to English. There are also a n
 
 ### Er
 
-Er generally translates to "there", but is sometimes used differently in Dutch. It is often necessary to include *er* when the subject is indefinite (and *er* usually comes after the verb).
+Er generally translates to "there", but is often used differently in Dutch.
+
+There are five different ways it can be used in Dutch, so there could be (and may be in future) a separate pages of notes dedicated to this two letter word.
+
+But for now think of it as follows: It is often necessary to include *er* when the subject is indefinite. And in this case *er* usually comes after the verb, to place emphasis on it.
 
 For example:
 
@@ -89,11 +93,11 @@ For example:
 
 Both translate to *because*. But...
 
-*Omdat* is used to give a reason for x:
+*Omdat* is used to give a reason for something:
 
 > Haar huis is blauw, omdat blauw haar lievelingskleur is. (Her house is blue because it's her favourite colour)
 
-*Want* is used to explain why you said x:
+*Want* is used to explain why you said something:
 
 > We moeten snel gaan pauzeren, want ik begin echt moe te worden (We must take a break soon because I am getting really tired).
 
