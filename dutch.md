@@ -73,6 +73,12 @@ But when the subordinate clause comes before the main clause (which is done for 
 
 > Waneer het koud is, **draagt zij** een jas (when it's cold, she wears a jacket).
 
+## Prepositions and circumpositions
+
+A *preposition* comes before a noun, and describes its location or direction. Examples are *met* (with), *naar* to, *voor* and *achter* (before and after), *naast* (next to), *beneden* and *boven* (below and above), *onder* and *over* (under and over), *bij* (at or near), *op* (on), *tussen* (between), *binnen* and *buiten* (inside and outside).
+
+In Dutch they also have *circumpositions*. These are similar to prepositions, but split in two parts that are placed before (i.e. *preposition*) and after (*postposition*). An example is *naartoe*, which in most sentences is split into *naar* and *toe* (*Ik ga naar jou toe.* - I am going **towards** you), to imply direction. Similar applies to *doorheen* (*door* and *heen*), *overheen* (*over* and *heen*, to imply going **across**), and *onderdoor* (*onder* and *door*, to imply going **underneath**).
+
 ## Quirks
 
 Many Dutch words are often used quite differently to English. There are also a number of other arbitrary rules. I'll explain some of the obvious ones in this section.
