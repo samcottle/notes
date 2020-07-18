@@ -77,7 +77,15 @@ But when the subordinate clause comes before the main clause (which is done for 
 
 A *preposition* comes before a noun, and describes its location or direction. Examples are *met* (with), *naar* to, *voor* and *achter* (before and after), *naast* (next to), *beneden* and *boven* (below and above), *onder* and *over* (under and over), *bij* (at or near), *op* (on), *tussen* (between), *binnen* and *buiten* (inside and outside).
 
-In Dutch they also have *circumpositions*. These are similar to prepositions, but split in two parts that are placed before (i.e. *preposition*) and after (*postposition*). An example is *naartoe*, which in most sentences is split into *naar* and *toe* (*Ik ga naar jou toe.* - I am going **towards** you), to imply direction. Similar applies to *doorheen* (*door* and *heen*), *overheen* (*over* and *heen*, to imply going **across**), and *onderdoor* (*onder* and *door*, to imply going **underneath**).
+In Dutch they also have *circumpositions*. These are similar to prepositions, but split in two parts that are placed before (i.e. *preposition*) and after (*postposition*). An example is *naartoe*, which in most sentences is split into *naar* and *toe* (*Ik ga naar jou toe.* - I am going **towards** you), to imply direction. Here are some more examples:
+- *achteraan*: *achter* and *aan*, to imply moving **behind**.
+- *doorheen*: *door* and *heen*, to imply going **through**.
+- *naartoe*: *naar* and *toe*, to imply going **towards**.
+- *omheen*: *om* and *heen*, to imply going **around**.
+- *onderdoor*: *onder* and *door*, to imply going **underneath**.
+- *overheen*: *over* and *heen*, to imply going **across**.
+- *tussendoor*: *tussen* and *door*, to imply going **in-between**.
+- *vanaf*: *van* and *af*, to imply going **away from**.
 
 ## Quirks
 
