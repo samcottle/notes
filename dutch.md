@@ -53,6 +53,20 @@ But before an indefinite object. For example:
 
 > Ik eet **nu** *een* boterham. (I am eating **a** sandwich now)
 
+### Separable verbs
+
+These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence. While *separable verbs* don't exist in English, they are similar to what are known as *phrasal verbs*, like *stand up*, *write down*, *fill in*, and *hang out*.
+
+Some examples of separable verbs being split:
+- *Aantrekken*: Ik *trek* mijn schoenen niet *aan*. (I am not putting on my shoes.)
+- *Binnenkomen*: Zij *komt* de kamer *binnen*. (She enters the room.)
+
+In the case of **finite** verbs, the prefix moves to the end of the sentence and the verb takes its usual place (example: Jij *raakt* mij *aan* - you touch me). There is an exception to this in the case of subordinate clauses, where the finite verb is always moved to the end of the sentence. (Example: Ik word boos, als jij me *aanraakt*. - I will become angry if you touch me.)
+
+For **infinitives** (a verb with the word *to* in front of it), the separable verb is written as one word. (Jij wil me *aanraken*. - You want *to touch* me.)
+
+In the case of **past participles** (a verb with *ed* at the end of it), a *ge* is also placed between the two parts. For example, *opgeven* (to give up) becomes *opgegeven* (given up).
+
 ## Conjunctions
 
 These are used to connect two sentences or phrases. The most commonly used conjunctions are *en*, *of*, *maar*, *want*, and *dus*.
