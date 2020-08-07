@@ -37,6 +37,7 @@ As a rule of thumb, Dutch uses what is called *V2 word order*. This is where the
 (As another rule of thumb, the Dutch language has so many exceptions that you can't take any rule as gospel. That includes this rule around V2 word order.)
 
 ### Inversion
+
 Words can also be places at the beginning of a sentence to give them emphasis. This is called *inversion*. For example, if you want to emphasize that you're eating that sandwich *now*:
 
 > **Nu** eet ik een boterham.
@@ -58,6 +59,7 @@ But before an indefinite object. For example:
 These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence. While *separable verbs* don't exist in English, they are similar to what are known as *phrasal verbs*, like *stand up*, *write down*, *fill in*, and *hang out*.
 
 Some examples of separable verbs being split:
+
 - *Aantrekken*: Ik *trek* mijn schoenen niet *aan*. (I am not putting on my shoes.)
 - *Binnenkomen*: Zij *komt* de kamer *binnen*. (She enters the room.)
 
@@ -92,6 +94,7 @@ But when the subordinate clause comes before the main clause (which is done for 
 A *preposition* comes before a noun, and describes its location or direction. Examples are *met* (with), *naar* to, *voor* and *achter* (before and after), *naast* (next to), *beneden* and *boven* (below and above), *onder* and *over* (under and over), *bij* (at or near), *op* (on), *tussen* (between), *binnen* and *buiten* (inside and outside).
 
 In Dutch they also have *circumpositions*. These are similar to prepositions, but split in two parts that are placed before (i.e. *preposition*) and after (*postposition*). An example is *naartoe*, which in most sentences is split into *naar* and *toe* (*Ik ga naar jou toe.* - I am going **towards** you), to imply direction. Here are some more examples:
+
 - *achteraan*: *achter* and *aan*, to imply moving **behind**.
 - *doorheen*: *door* and *heen*, to imply going **through**.
 - *naartoe*: *naar* and *toe*, to imply going **towards**.
