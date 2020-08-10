@@ -31,4 +31,4 @@
 
 ## Testing
 
-To experiment with any of these commands (without the risk of doing something horrendous) use the endpoints listed on [JSONplaceholder](https://jsonplaceholder.typicode.com/).
+To experiment with any of these commands (without the risk of doing something horrendous), you can use the endpoints listed on [JSONplaceholder](https://jsonplaceholder.typicode.com/) to make test calls.
