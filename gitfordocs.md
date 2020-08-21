@@ -18,7 +18,7 @@ Git works on both text and binary files (images, video, audio, etc.), and genera
 - `git log`: Shows you the history of git commits. For an easier to read version, there's `git log --oneline`.
 - `git checkout`: Lets you choose which commit or branch you want to work on. Fow example, to work on the most recent version on the `master` branch you'd use `git checkout master`.
 - `git tag`: Can be used by itself to see a list of all tags that have been made, or in combination with some arguments to tag a commit (`git tag -a tag_name -m "Description for the tag"`).
-- `git pull`: Pulls all the commits that have been made to the repository. You can *only* use this if you have committed your files.
+- `git pull`: Pulls all the commits that have been made to the repository. You can _only_ use this if you have committed your files.
 - `git branch`: Can be used by itself to list branches, or with an argument to create a new branch (when doing this, it won't automatically move you to that branch).
 - `git stash`: Creates a new stash, and reverts to the latest commit. Can use the `list` argument to list all the most recent stashes, and the `pop` argument restores the most recent changes.
 - `git diff`: Compared two branches, for example `git diff branch-a branch-b`.
@@ -51,9 +51,9 @@ There are three ways in which a pull is handled:
 
 1. If the remote file is the same as the last pull, the local file will be left as is.
 2. If the remote file has changed but the local file is the same (i.e. someone else has pushed updates), the local file is replaced with the remote file.
-3. If both the remote and local files have changed, it will try and merge the remote file into the local file. When it can't do this, it's known as a *merge conflict*.
+3. If both the remote and local files have changed, it will try and merge the remote file into the local file. When it can't do this, it's known as a _merge conflict_.
 
-**Note:** Remember that you can *only* use `git pull` if you have committed your files.
+**Note:** Remember that you can _only_ use `git pull` if you have committed your files.
 
 ### Resolving merge conflicts
 
@@ -82,7 +82,7 @@ Is how you "stash" changes if you're not ready to commit yet. You can resume wor
 Easiest to do this using a GUI tool (GitHub, etc), by creating a pull request. The two ways to do this using a GUI:
 
 1. Merge pull request: Every commit on the new branch becomes a commit on the original branch (i.e. Master).
-2. Squash and merge pull request: Simplifies the history by *squashing* down all the commits on the new branch into one commit on the original branch (i.e. Master).
+2. Squash and merge pull request: Simplifies the history by _squashing_ down all the commits on the new branch into one commit on the original branch (i.e. Master).
 
 Can also be done using the command line using the commands `git diff` and `git merge`.
 
@@ -124,6 +124,8 @@ Then, once you've made the changes you want to merge with the original repo:
 2. Follow the instructions.
 
 ## Troubleshooting
+
+Solutions to several specific issues are covered below. More git troubleshooting information can be found at [ohshitgit.com](https://ohshitgit.com/).
 
 ### Resetting back to the last unstaged changes
 
