@@ -30,7 +30,7 @@ And:
 
 ## Verbs
 
-As a rule of thumb, Dutch uses what is called *V2 word order*. This is where the verb is the second element in a sentence. For example:
+As a rule of thumb, Dutch uses what is called _V2 word order_. This is where the verb is the second element in a sentence. For example:
 
 > Ik eet een boterham.
 
@@ -38,7 +38,7 @@ As a rule of thumb, Dutch uses what is called *V2 word order*. This is where the
 
 ### Inversion
 
-Words can also be places at the beginning of a sentence to give them emphasis. This is called *inversion*. For example, if you want to emphasize that you're eating that sandwich *now*:
+Words can also be places at the beginning of a sentence to give them emphasis. This is called _inversion_. For example, if you want to emphasize that you're eating that sandwich _now_:
 
 > **Nu** eet ik een boterham.
 
@@ -52,34 +52,34 @@ Adverbs come after a definite object. For example:
 
 But before an indefinite object. For example:
 
-> Ik eet **nu** *een* boterham. (I am eating **a** sandwich now)
+> Ik eet **nu** _een_ boterham. (I am eating **a** sandwich now)
 
 ### Separable verbs
 
-These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence. While *separable verbs* don't exist in English, they are similar to what are known as *phrasal verbs*, like *stand up*, *write down*, *fill in*, and *hang out*.
+These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence. While _separable verbs_ don't exist in English, they are similar to what are known as _phrasal verbs_, like _stand up_, _write down_, _fill in_, and _hang out_.
 
 Some examples of separable verbs being split:
 
-- *Aantrekken*: Ik *trek* mijn schoenen niet *aan*. (I am not putting on my shoes.)
-- *Binnenkomen*: Zij *komt* de kamer *binnen*. (She enters the room.)
+- _Aantrekken_: Ik _trek_ mijn schoenen niet _aan_. (I am not putting on my shoes.)
+- _Binnenkomen_: Zij _komt_ de kamer _binnen_. (She enters the room.)
 
-In the case of **finite** verbs, the prefix moves to the end of the sentence and the verb takes its usual place (example: Jij *raakt* mij *aan* - you touch me). There is an exception to this in the case of subordinate clauses, where the finite verb is always moved to the end of the sentence. (Example: Ik word boos, als jij me *aanraakt*. - I will become angry if you touch me.)
+In the case of **finite** verbs, the prefix moves to the end of the sentence and the verb takes its usual place (example: Jij _raakt_ mij _aan_ - you touch me). There is an exception to this in the case of subordinate clauses, where the finite verb is always moved to the end of the sentence. (Example: Ik word boos, als jij me _aanraakt_. - I will become angry if you touch me.)
 
-For **infinitives** (a verb with the word *to* in front of it), the separable verb is written as one word. (Jij wil me *aanraken*. - You want *to touch* me.)
+For **infinitives** (a verb with the word _to_ in front of it), the separable verb is written as one word. (Jij wil me _aanraken_. - You want _to touch_ me.)
 
-In the case of **past participles** (a verb with *ed* at the end of it), a *ge* is also placed between the two parts. For example, *opgeven* (to give up) becomes *opgegeven* (given up).
+In the case of **past participles** (a verb with _ed_ at the end of it), a _ge_ is also placed between the two parts. For example, _opgeven_ (to give up) becomes _opgegeven_ (given up).
 
 ## Conjunctions
 
-These are used to connect two sentences or phrases. The most commonly used conjunctions are *en*, *of*, *maar*, *want*, and *dus*.
+These are used to connect two sentences or phrases. The most commonly used conjunctions are _en_, _of_, _maar_, _want_, and _dus_.
 
-Nearly all other conjunctions are referred to as *subordinating conjunctions* (i.e. they have a subordinate clause: one that can't function as a sentence in its own right). Examples include:
+Nearly all other conjunctions are referred to as _subordinating conjunctions_ (i.e. they have a subordinate clause: one that can't function as a sentence in its own right). Examples include:
 
-- Contrast: *hoewel* (although/even though)
-- Cause: *omdat* (because), *doordat* (because)
-- Consequence: *zodat* (so that)
-- Condition: *als* (as/if), *tenzij* (unless)
-- Time: *terwijl* (while), *zodra* (as soon), *wanneer* (when), *totdat* (until), *voordat* (before)
+- Contrast: _hoewel_ (although/even though)
+- Cause: _omdat_ (because), _doordat_ (because)
+- Consequence: _zodat_ (so that)
+- Condition: _als_ (as/if), _tenzij_ (unless)
+- Time: _terwijl_ (while), _zodra_ (as soon), _wanneer_ (when), _totdat_ (until), _voordat_ (before)
 
 These use a different word order. Instead of the verb-second word order, the verbs in subordinate clauses are always at the end. For example:
 
@@ -91,18 +91,43 @@ But when the subordinate clause comes before the main clause (which is done for 
 
 ## Prepositions and circumpositions
 
-A *preposition* comes before a noun, and describes its location or direction. Examples are *met* (with), *naar* to, *voor* and *achter* (before and after), *naast* (next to), *beneden* and *boven* (below and above), *onder* and *over* (under and over), *bij* (at or near), *op* (on), *tussen* (between), *binnen* and *buiten* (inside and outside).
+A _preposition_ comes before a noun, and describes its location or direction. Examples are _met_ (with), _naar_ to, _voor_ and _achter_ (before and after), _naast_ (next to), _beneden_ and _boven_ (below and above), _onder_ and _over_ (under and over), _bij_ (at or near), _op_ (on), _tussen_ (between), _binnen_ and _buiten_ (inside and outside).
 
-In Dutch they also have *circumpositions*. These are similar to prepositions, but split in two parts that are placed before (i.e. *preposition*) and after (*postposition*). An example is *naartoe*, which in most sentences is split into *naar* and *toe* (*Ik ga naar jou toe.* - I am going **towards** you), to imply direction. Here are some more examples:
+In Dutch they also have _circumpositions_. These are similar to prepositions, but split in two parts that are placed before (i.e. _preposition_) and after (_postposition_). An example is _naartoe_, which in most sentences is split into _naar_ and _toe_ (_Ik ga naar jou toe._ - I am going **towards** you), to imply direction. Here are some more examples:
 
-- *achteraan*: *achter* and *aan*, to imply moving **behind**.
-- *doorheen*: *door* and *heen*, to imply going **through**.
-- *naartoe*: *naar* and *toe*, to imply going **towards**.
-- *omheen*: *om* and *heen*, to imply going **around**.
-- *onderdoor*: *onder* and *door*, to imply going **underneath**.
-- *overheen*: *over* and *heen*, to imply going **across**.
-- *tussendoor*: *tussen* and *door*, to imply going **in-between**.
-- *vanaf*: *van* and *af*, to imply going **away from**.
+- _achteraan_: _achter_ and _aan_, to imply moving **behind**.
+- _doorheen_: _door_ and _heen_, to imply going **through**.
+- _naartoe_: _naar_ and _toe_, to imply going **towards**.
+- _omheen_: _om_ and _heen_, to imply going **around**.
+- _onderdoor_: _onder_ and _door_, to imply going **underneath**.
+- _overheen_: _over_ and _heen_, to imply going **across**.
+- _tussendoor_: _tussen_ and _door_, to imply going **in-between**.
+- _vanaf_: _van_ and _af_, to imply going **away from**.
+
+## Tense
+
+### Present continuous
+
+In Dutch, there are six ways of using present continuous. In other words, there are six ways to say "He is writing":
+
+- Start with a form of _zijn_, followed by _aan het_. So _Hij is aan het schrijven_.
+- A verb expressing a physical position (like sitting), followed by the infinitive. So _Hij zit te schrijven_.
+- Dramatically (whatever this means; perhaps in some sort of theatre script?), you would say _Hij is schrijvende_.
+- To imply business: _Hij is bezig met schrijven_. But then there is also _Hij is bezig te schrijven_.
+- The subject is away doing some activity, which is when you'd use _zijn_ followed by the infinitive: _Hij is schrijven_.
+
+### Future tense
+
+Future tense is formed as either:
+
+- _Gaan_ + infinitive: To **go**.
+- _Zullen_ + infinitive: **Shall** or **will**.
+
+You would use _Zullen_ + infinitive when:
+
+- Something is likely to take place.
+- Something will definitely happen.
+- To promise or propose something.
 
 ## Quirks
 
@@ -114,7 +139,7 @@ Er generally translates to "there", but is often used differently in Dutch.
 
 There are five different ways it can be used in Dutch, so there could be (and may be in future) a separate pages of notes dedicated to this two letter word.
 
-But for now think of it as follows: It is often necessary to include *er* when the subject is indefinite. And in this case *er* usually comes after the verb, to place emphasis on it.
+But for now think of it as follows: It is often necessary to include _er_ when the subject is indefinite. And in this case _er_ usually comes after the verb, to place emphasis on it.
 
 For example:
 
@@ -122,13 +147,13 @@ For example:
 
 ### Omdat vs. Want
 
-Both translate to *because*. But...
+Both translate to _because_. But...
 
-*Omdat* is used to give a reason for something:
+_Omdat_ is used to give a reason for something:
 
 > Haar huis is blauw, omdat blauw haar lievelingskleur is. (Her house is blue because it's her favourite colour)
 
-*Want* is used to explain why you said something:
+_Want_ is used to explain why you said something:
 
 > We moeten snel gaan pauzeren, want ik begin echt moe te worden (We must take a break soon because I am getting really tired).
 
@@ -160,7 +185,7 @@ And:
 
 ### Hebt vs. heeft
 
-Does someone *have* something? If you're talking to someone directly they *hebt* it. But if you're referring to someone in the third person, they *heeft* it. For example:
+Does someone _have_ something? If you're talking to someone directly they _hebt_ it. But if you're referring to someone in the third person, they _heeft_ it. For example:
 
 > Je **hebt** een ui. (You have an egg)
 
