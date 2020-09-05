@@ -113,7 +113,7 @@ In Dutch, there are six ways of using present continuous. In other words, there 
 - Start with a form of _zijn_, followed by _aan het_. So _Hij is aan het schrijven_.
 - A verb expressing a physical position (like sitting), followed by the infinitive. So _Hij zit te schrijven_.
 - Dramatically (whatever this means; perhaps in some sort of theatre script?), you would say _Hij is schrijvende_.
-- To imply business: _Hij is bezig met schrijven_. But then there is also _Hij is bezig te schrijven_.
+- To imply busyness: _Hij is bezig met schrijven_. But then there is also _Hij is bezig te schrijven_.
 - The subject is away doing some activity, which is when you'd use _zijn_ followed by the infinitive: _Hij is schrijven_.
 
 ### Future tense
