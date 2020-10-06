@@ -8,7 +8,7 @@
 - `cp`: Copy a file or folder. `cp file1 file2` would make a copy of `file1` and call it `file2`. `cp file1 /folder1` would make a copy of `file1` in `folder1`.
 - `mv`: Move or rename a file. `mv file1 /folder1` moves `file1` to a folder called `folder1`. `mv file1 file2` renames `file1` to `file2`.
 - `rm`: Remove a file or directory. `rm file1 file2` deletes `file1` and `file2`. To delete directories, you often need to use `rm -r folder1`, which recursively deletes all the files and subdirectories within it (otherwise you get the error `rm: cannot remove 'folder1': Is a directory`.
-- `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an *s* with `echo *s`.
+- `echo`: Display text. Using wildcards, you could use `echo` to display all files in a folder ending in an _s_ with `echo *s`.
 - `clear`: Clears the terminal.
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
@@ -141,7 +141,7 @@ Apart from using the arrow keys to move the cursor you can use the following key
 
 ### Brace expansion
 
-Brace expansion (`{}`) can be used as a sort of wildcard. For example, to display the letters between *a* and *r* you can use `echo {a..r}`.
+Brace expansion (`{}`) can be used as a sort of wildcard. For example, to display the letters between _a_ and _r_ you can use `echo {a..r}`.
 
 This can be really useful if you need to create, for example, multiple folders that use a similar format. Instead of manually creating a folder to store files for each month of the years 2017 and 2019, you could use `mkdir {2017..2019}-0{1..9} {2017..2019}-{10..12}`.
 
@@ -178,11 +178,11 @@ To alter a file's Checksum:
 Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
 
 - `apt update`: Checks for updates to installed packages.
-- `apt upgrade`: Updates (or *upgrades*) installed packages.
+- `apt upgrade`: Updates (or _upgrades_) installed packages.
 - `apt dist-upgrade`: Updates installed packages, including kernel packages.
 - `apt search package_name`: Searches for a specified package. For example `apt search hugo` returns a list of available packages containing `hugo`.
 - `apt install package_name`: Installs a specified package. For example `sudo apt install hugo` installs the package `hugo`.
-- `apt remove package_name`: Removes an installed package (but leaves the configuration files). For example `sudo apt remove hugo` removes (i.e. *uninstalls*) the package `hugo`.
+- `apt remove package_name`: Removes an installed package (but leaves the configuration files). For example `sudo apt remove hugo` removes (i.e. _uninstalls_) the package `hugo`.
 - `apt purge package_name`: Removes everything related to an installed package (think of it as `remove` + deletes configuration files).
 - `apt autoremove`: Removes any dependencies (i.e. libraries and packages) that are no longer required.
 
@@ -199,7 +199,7 @@ Now we can use the command `myAlias` to invoke those three commands.
 
 ## Using redirection
 
-The `>` operator is used to *redirect* output from a command to a file. For example, to redirect the output of the `ls -l` command to a file called `list.txt` you would use:
+The `>` operator is used to _redirect_ output from a command to a file. For example, to redirect the output of the `ls -l` command to a file called `list.txt` you would use:
 `ls -l > list.txt`.
 
 This can be combined with the following commands:
@@ -216,7 +216,7 @@ Here are some commands you can do this with:
 
 - `less`: This is used to display information in the teminal, one page at a time. Using pipelining, this can be used in combination with, for example, `ls` to display the contents of a large directory one page at a time, with `ls -l /usr/bin | less`.
 - `sort`: Unsurprisingly, this sorts information. So if you wanted to list the contents of two directories, `/bin` and `/usr/bin`, and combine the output in a sorted list, displayed one page at a time, you would use `ls /bin /usr/bin | sort | less`.
-- `uniq`: Removes (or lists) all duplicates. For example, `ls /bin /usr/bin | sort | uniq | less` is the same as above, but all the duplicated file names are removed. You can also use `uniq` to list *only* the duplicates, with the `-d` option: `ls /bin /usr/bin | sort |uniq -d | less`.
+- `uniq`: Removes (or lists) all duplicates. For example, `ls /bin /usr/bin | sort | uniq | less` is the same as above, but all the duplicated file names are removed. You can also use `uniq` to list _only_ the duplicates, with the `-d` option: `ls /bin /usr/bin | sort |uniq -d | less`.
 - `wc`: Counts the number of lines, words, and bytes in a file (or list). For example, to count the number of unique items in `/bin` and `/usr/bin` you could use `ls /bin /usr/bin | sort | uniq | wc -l` (**note**: the `-l` option limits the output to report lines only).
 - `grep`: Very powerful command, but in this case it can be used to match patterns in a file (a bit like a search, or a filter). So to list all commands related to `zip` compression in the `/bin` and `/usr/bin` folders, you could use `ls /bin /usr/bin | sort | uniq | grep zip`.
 - `head` and `tail`: Get the first or last lines of a file or folder (by default, the first or last 10 lines). For example, to get the last `5` files of the `/usr/bin` folder you could use `ls /usr/bin | tail -n 5` (the `-n` option, followed by a number, prints that number of lines).
@@ -230,14 +230,15 @@ Here are some commands you can do this with:
 - `tail`: Displays the last lines of a file. For example, to display the last 15 lines of `file.txt` you'd use `head -15 file.txt`.
 - `nl`: Similar to `cat`, but uses numbered lines. For example, to display the contents of `file.txt` with numbered lines you'd use `nl file.txt`.
 - `more`: Displays a file in pages (similar to `man` pages). For example, `more file.txt`.
-- `less`: Essentially `more` with *more* functionality (counter intuitively). For example, `less file.txt`. From here, you can search within the file with the **/** key.
-- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`. To do a case *insensitive* filter, use the `-i` flag.
+- `less`: Essentially `more` with _more_ functionality (counter intuitively). For example, `less file.txt`. From here, you can search within the file with the **/** key.
+- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`. To do a case _insensitive_ filter, use the `-i` flag.
 - `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
+- `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
 
 ## Networking
 
 - `ifconfig`: Examines active network devices. Can also be used to change your IP address on the network with, for example, to request the IP address of **192.168.1.2** you would use `ifconfig eth0 192.168.1.2`. The network mask (`netmask`), broadcast address (`broadcast`), and MAC address (`hw`) can also be changed.
-- `iwconfig`: Examines active *wireless* network devices.
+- `iwconfig`: Examines active _wireless_ network devices.
 - `dhclient`: Request a new IP address. For example, `dhclient eth0` will request a new IP address for the ethernet connection.
 - `dig`: Checks DNS information relating to a website. For example, to get the name server (`ns`) information for Google.com you'd use `dig www.google.com ns`.
 
