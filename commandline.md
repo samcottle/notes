@@ -27,13 +27,13 @@ There are several commands that can be used for finding files:
 
 ## Getting help
 
-The commands for getting help aren't standardised, but generally speaking you can use the following to find out about a command:
+The commands for getting help aren't standardized, but generally speaking you can use the following to find out about a command:
 
 - `help`: Gets help for built-in programs. For help information on how to use the change directory command, you'd use `help cd`.
 - `--help`: Gets more info on the syntax of a command. So `mkdir --help` gives you a list of arguments you can use with the `mkdir` command, for example.
 - `info`: Gets the programs manual. `info ls` brings up the manual for the `ls` command. This gives you a very similar result to `man`, but more to the point.
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information. **Note**: For more user-friendly man pages, you can use curl to get online cheat sheets for popular linux commands. For example, `curl cheat.sh/grep` would get you information and examples for the `grep` command.
-- `whatis`: Display a brief discription of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
+- `whatis`: Display a brief description of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
 ## Permissions
 
@@ -173,7 +173,9 @@ To alter a file's Checksum:
 
 - `truncate`: Appends data to the end of a file. For example `truncate -s +10 test.txt` would add 10 bytes of data to the end of the file.
 
-## Using `apt`
+## Installing and removing software
+
+### Using `apt`
 
 Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
 
@@ -186,9 +188,17 @@ Many `apt` commands need to be run in superuser (i.e. `sudo`) mode.
 - `apt purge package_name`: Removes everything related to an installed package (think of it as `remove` + deletes configuration files).
 - `apt autoremove`: Removes any dependencies (i.e. libraries and packages) that are no longer required.
 
+### Using `dpkg`
+
+The installation and removal of `.deb` files is done with `dpkg` (Debian Package Management System). These need to be run in superuser (i.e. `sudo`) mode.
+
+- `dpkg-query -l`: Lists installed packages.
+- `dpkg -i`: Installs a package from a `.deb` file. For example, `sudo dpkg -i app_v1.1_linux.deb` installs a package from `app_v1.1_linux.deb` (the actual package may have a different name than the file).
+- `dpkg -r`: Removes an installed package. For example, `sudo dpkg -r app` removes the package called `app`.
+
 ## Using an `alias` to create commands
 
-This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is seperated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
+This is a way of stringing multiple commands together in a sequence, referred to as an `alias`. Each command in an alias is separated by a semicolon. Here's what defining an alias, `myAlias`, with three commands looks like:
 `alias myAlias='cd ..; mkdir new; ls'`
 
 Now we can use the command `myAlias` to invoke those three commands.
