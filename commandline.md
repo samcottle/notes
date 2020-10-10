@@ -13,6 +13,32 @@
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
 
+## Common directories
+
+Useful directories within a 'standard' Linux filesystem include:
+
+- `/`: The root directory.
+- `/home`: The user's home directory.
+- `/bin`: Contains binaries that are needed for the system to run.
+- `/boot`: Contains the files needed to boot. Includes `/boot/grub/grub.conf` (the boot loader), and `/boot/vmlinuz` (the Linux kernel).
+- `/dev`: Contains a list of all the devices that Linux understands.
+- `/etc`: Contains systemwide configuration files and shell scripts. Includes `/etc/crontab` (used for running automated jobs), and `etc/fstab` (the table of strage devices).
+- `/lib`: Contains shared library files used by system programs.
+- `/media`: Contains mount points for removable media.
+- `/mnt`: Contains mount points removable media that were manually mounted. This is typically used on older Linux systems.
+- `/opt`: Contains 'optional' software. This is often where commercial software is stored.
+- `/root`: The home directory for the `root` account.
+- `/sbin`: Contains system binaries, which are used to perform important system tasks. This folder is off limits to anyone but the `superuser`.
+- `/tmp`: Contains temporary files. This is often emptied with each reboot.
+- `/usr`: Contains all the program and support files availabe to regular users:
+  - `/usr/bin`: The binary files available to all regular users.
+  - `/usr/local`: The binary files that did not come with the distro.
+  - `/usr/sbin`: System binaries.
+  - `/usr/share`: Shared data used by the binaries in `/usr/bin`.
+  - `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
+- `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
+- `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
+
 ## Finding stuff
 
 There are several commands that can be used for finding files:
@@ -224,7 +250,7 @@ The pipe operator, or `|`, is used to pipe the output of one command into anothe
 
 Here are some commands you can do this with:
 
-- `less`: This is used to display information in the teminal, one page at a time. Using pipelining, this can be used in combination with, for example, `ls` to display the contents of a large directory one page at a time, with `ls -l /usr/bin | less`.
+- `less`: This is used to display information in the terminal, one page at a time. Using pipelining, this can be used in combination with, for example, `ls` to display the contents of a large directory one page at a time, with `ls -l /usr/bin | less`.
 - `sort`: Unsurprisingly, this sorts information. So if you wanted to list the contents of two directories, `/bin` and `/usr/bin`, and combine the output in a sorted list, displayed one page at a time, you would use `ls /bin /usr/bin | sort | less`.
 - `uniq`: Removes (or lists) all duplicates. For example, `ls /bin /usr/bin | sort | uniq | less` is the same as above, but all the duplicated file names are removed. You can also use `uniq` to list _only_ the duplicates, with the `-d` option: `ls /bin /usr/bin | sort |uniq -d | less`.
 - `wc`: Counts the number of lines, words, and bytes in a file (or list). For example, to count the number of unique items in `/bin` and `/usr/bin` you could use `ls /bin /usr/bin | sort | uniq | wc -l` (**note**: the `-l` option limits the output to report lines only).
@@ -252,14 +278,20 @@ Here are some commands you can do this with:
 - `dhclient`: Request a new IP address. For example, `dhclient eth0` will request a new IP address for the ethernet connection.
 - `dig`: Checks DNS information relating to a website. For example, to get the name server (`ns`) information for Google.com you'd use `dig www.google.com ns`.
 
-## Using VNC server
+## App-specific commands
 
-If you want to start or stop the VNC server from the command line:
+These are the commands for other CLI apps I often use.
 
-- `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
-- `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
+### Glow
 
-## Using Hugo
+[Glow](https://github.com/charmbracelet/glow) renders markdown in the command line.
+
+- `glow`: Starts the textual user interface, where you can open a markdown file from the current folder.
+- `glow content.md`: Opens the file `content.md` in the CLI (which is not scrollable, like the textual user interface).
+- `glow https://raw.githubusercontent.com/samcottle/notes/master/commandline.md`: Fetches a markdown file from a URL.
+- `glow github.com/charmbracelet/glow`: Fetches a README.md from Github or Gitlab.
+
+### Hugo
 
 Common commands for the [Hugo static site generator](https://www.gohugo.io/):
 
@@ -267,28 +299,9 @@ Common commands for the [Hugo static site generator](https://www.gohugo.io/):
 - `hugo server -D`: Starts a [localhost](http://localhost:1313/) server with your site, including any draft posts.
 - `hugo -D`: Build static site. This site can be deployed to a production web server.
 
-## Useful directories
+### VNC server
 
-Useful directories within a 'standard' Linux filesystem include:
+If you want to start or stop the VNC server from the command line:
 
-- `/`: The root directory.
-- `/home`: The user's home directory.
-- `/bin`: Contains binaries that are needed for the system to run.
-- `/boot`: Contains the files needed to boot. Includes `/boot/grub/grub.conf` (the boot loader), and `/boot/vmlinuz` (the Linux kernel).
-- `/dev`: Contains a list of all the devices that Linux understands.
-- `/etc`: Contains systemwide configuration files and shell scripts. Includes `/etc/crontab` (used for running automated jobs), and `etc/fstab` (the table of strage devices).
-- `/lib`: Contains shared library files used by system programs.
-- `/media`: Contains mount points for removable media.
-- `/mnt`: Contains mount points removable media that were manually mounted. This is typically used on older Linux systems.
-- `/opt`: Contains 'optional' software. This is often where commercial software is stored.
-- `/root`: The home directory for the `root` account.
-- `/sbin`: Contains system binaries, which are used to perform important system tasks. This folder is off limits to anyone but the `superuser`.
-- `/tmp`: Contains temporary files. This is often emptied with each reboot.
-- `/usr`: Contains all the program and support files availabe to regular users:
-  - `/usr/bin`: The binary files available to all regular users.
-  - `/usr/local`: The binary files that did not come with the distro.
-  - `/usr/sbin`: System binaries.
-  - `/usr/share`: Shared data used by the binaries in `/usr/bin`.
-  - `/usr/share/doc`: Documentation for the binaries in `/usr/bin`. This is organised by package.
-- `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
-- `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
+- `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
+- `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
