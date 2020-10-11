@@ -271,6 +271,28 @@ Here are some commands you can do this with:
 - `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
 - `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
 
+## Compressing or decompressing files
+
+### `gzip`
+
+`gzip` is the 'classic' compression tool, for working with `.gz` files:
+
+- `gzip data.txt`: Compresses the file `data.txt`, and gives it a `.gz` extension.
+- `gzip -8 data.txt`: Compresses the file `data.txt` with a better and slower level of compression (the levels range from `1` - fastest but least compression - to `9` - slowest but best compression).
+- `gzip -r data`: Compresses the folder called `data`, and gives it a `.gz` extension.
+- `gzip -d data.gz`: Decompresses the file `data.gz`.
+
+### `tar` archives
+
+`tar` archives are often compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
+
+- `tar czvf compressed.tar.gz data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.gz`.
+- `tar tzvf compressed.tar.gz`: Views the contents of `compressed.tar.gz`.
+- `tar xzvf compressed.tar.gz`: Decompresses a `.tar.gz` file.
+- `tar cjvf compressed.tar.bz2 data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.bz2`.
+- `tar tjvf compressed.tar.bz2`: Views the contents of `compressed.tar.bz2`.
+- `tar xjvf compressed.tar.bz2`: Decompresses the file `compressed.tar.bz2`.
+
 ## Networking
 
 - `ifconfig`: Examines active network devices. Can also be used to change your IP address on the network with, for example, to request the IP address of **192.168.1.2** you would use `ifconfig eth0 192.168.1.2`. The network mask (`netmask`), broadcast address (`broadcast`), and MAC address (`hw`) can also be changed.
