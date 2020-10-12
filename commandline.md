@@ -304,7 +304,16 @@ Here are some commands you can do this with:
 
 ## App-specific commands
 
-These are the commands for other CLI apps I often use.
+Commands for other CLI apps I use frequently.
+
+### `curl`
+
+The `curl` command can be used to download files or data from a host, and POST data to a host:
+
+- `curl cheat.sh/curl`: Downloads information from `cheat.sh` on `curl`.
+- `curl wttr.in`: Downloads weather information for your location, and prints it in the terminal.
+- `curl wttr.in/auckland`: Downloads weather information for a specified location (in this case Auckland), and prints it in the terminal.
+- `curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com`: POST json data to `example.com`.
 
 ### Glow
 
