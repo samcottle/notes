@@ -299,6 +299,8 @@ Here are some commands you can do this with:
 - `iwconfig`: Examines active _wireless_ network devices.
 - `dhclient`: Request a new IP address. For example, `dhclient eth0` will request a new IP address for the ethernet connection.
 - `dig`: Checks DNS information relating to a website. For example, to get the name server (`ns`) information for Google.com you'd use `dig www.google.com ns`.
+- `ping`: Continually pings a host with packets, to see how it responds. `ping` prints the host's IP address, and statistics about network performance between you and the host.
+- `traceroute`: Prints the route of packets between your device and the host. For example, `traceroute google.com` provides the details of where packets travel between the device and `google.com`.
 
 ## App-specific commands
 
