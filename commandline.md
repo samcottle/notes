@@ -310,6 +310,7 @@ The `wget` command can be used to download a single or multiple files, or even e
 
 - `tar -cf archive.tar file1 file2`: Creates an archive called `archive.tar` with the files `file1` and `file2`.
 - `tar -xf archive.tar`: Extracts the contents of `archive.tar`.
+- `tar -tf archive.tar`: View the contents of `archive.tar`.
 
 A `tar` archive can be compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
 
