@@ -62,6 +62,67 @@ The commands for getting help aren't standardized, but generally speaking you ca
 - `man`: Gets the programs manual. `man ls` brings up the manual for the `ls` command. This gives you a very similar result to `info`, but with more contextual information. **Note**: For more user-friendly man pages, you can use curl to get online cheat sheets for popular linux commands. For example, `curl cheat.sh/grep` would get you information and examples for the `grep` command.
 - `whatis`: Display a brief description of the command. `whatis ls` Gives you a short description (in this case the description `list directory contents`).
 
+## Viewing files
+
+- `cat`: Very basic text display command. For example, to display the contents of `file.txt` you'd use `cat file.txt`.
+- `head`: Displays the first lines of a file. For example, to display the first 5 lines of `file.txt` you'd use `head -5 file.txt`.
+- `tail`: Displays the last lines of a file. For example, to display the last 15 lines of `file.txt` you'd use `head -15 file.txt`.
+- `nl`: Similar to `cat`, but uses numbered lines. For example, to display the contents of `file.txt` with numbered lines you'd use `nl file.txt`.
+- `more`: Displays a file in pages (similar to `man` pages). For example, `more file.txt`.
+- `less`: Essentially `more` with _more_ functionality (counter intuitively). For example, `less file.txt`. From here, you can search within the file with the **/** key.
+- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`. To do a case _insensitive_ filter, use the `-i` flag.
+- `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
+- `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
+
+## Downloading files
+
+### `curl`
+
+The `curl` command can be used to download files or data from a host, and POST data to a host:
+
+- `curl example.com/file.zip`: Downloads the file from the location `example.com/file.zip`.
+- `curl cheat.sh/curl`: Downloads information from `cheat.sh` on `curl`.
+- `curl wttr.in`: Downloads weather information for your location, and prints it in the terminal.
+- `curl wttr.in/auckland`: Downloads weather information for a specified location (in this case Auckland), and prints it in the terminal.
+- `curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com`: POST json data to `example.com`.
+
+### `wget`
+
+The `wget` command can be used to download a single or multiple files, or even entire websites.
+
+- `wget example.com/index.html`: Downloads the file from the location `example.com/index.html`.
+- `wget -r ftp:example.com/directory`: Downloads a folder from the location specified.
+- `wget -m -convert-links -page-requisites example.com`: Downloads the entire public-facing website for `example.com`.
+- `wget -c`: Resumes a previous download that didn't finish.
+
+## Compressing or decompressing files
+
+### `gzip`
+
+`gzip` is the 'classic' compression tool, for working with `.gz` files:
+
+- `gzip data.txt`: Compresses the file `data.txt`, and gives it a `.gz` extension.
+- `gzip -8 data.txt`: Compresses the file `data.txt` with a better and slower level of compression (the levels range from `1` - fastest but least compression - to `9` - slowest but best compression).
+- `gzip -r data`: Compresses the folder called `data`, and gives it a `.gz` extension.
+- `gzip -d data.gz`: Decompresses the file `data.gz`.
+
+### `tar` archives
+
+`tar` files are archives that contain multiple files:
+
+- `tar -cf archive.tar file1 file2`: Creates an archive called `archive.tar` with the files `file1` and `file2`.
+- `tar -xf archive.tar`: Extracts the contents of `archive.tar`.
+- `tar -tf archive.tar`: View the contents of `archive.tar`.
+
+A `tar` archive can be compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
+
+- `tar czvf compressed.tar.gz data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.gz`.
+- `tar tzvf compressed.tar.gz`: Views the contents of `compressed.tar.gz`.
+- `tar xzvf compressed.tar.gz`: Decompresses a `.tar.gz` file.
+- `tar cjvf compressed.tar.bz2 data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.bz2`.
+- `tar tjvf compressed.tar.bz2`: Views the contents of `compressed.tar.bz2`.
+- `tar xjvf compressed.tar.bz2`: Decompresses the file `compressed.tar.bz2`.
+
 ## Permissions
 
 These characters translate into attributes, such as the file type, and who can read (`r`), write (`w`), and execute (`x`) the file. For example, `drwxr-xr--` would translate into:
@@ -259,67 +320,6 @@ Here are some commands you can do this with:
 - `head` and `tail`: Get the first or last lines of a file or folder (by default, the first or last 10 lines). For example, to get the last `5` files of the `/usr/bin` folder you could use `ls /usr/bin | tail -n 5` (the `-n` option, followed by a number, prints that number of lines).
   - `tail` can also be used to view file changes in real time, with the `-f` option (and you may need to be in superuser-mode to run this command). For example, `sudo tail -f /var/log/messages` monitors changes to this file (until you stop with **Ctrl + c**).
 - `tee`: Used to copy information, mid-pipeline, to a file. So to capture the contents of the `/usr/bin` directory, before filtering it for commands with `zip` (using `grep`) you could use `ls /usr/bin | tee list.txt | grep zip`.
-
-## Viewing files
-
-- `cat`: Very basic text display command. For example, to display the contents of `file.txt` you'd use `cat file.txt`.
-- `head`: Displays the first lines of a file. For example, to display the first 5 lines of `file.txt` you'd use `head -5 file.txt`.
-- `tail`: Displays the last lines of a file. For example, to display the last 15 lines of `file.txt` you'd use `head -15 file.txt`.
-- `nl`: Similar to `cat`, but uses numbered lines. For example, to display the contents of `file.txt` with numbered lines you'd use `nl file.txt`.
-- `more`: Displays a file in pages (similar to `man` pages). For example, `more file.txt`.
-- `less`: Essentially `more` with _more_ functionality (counter intuitively). For example, `less file.txt`. From here, you can search within the file with the **/** key.
-- `grep`: Can be used in combination with other commands to filter the contents of a file. For example, to find all instances of the word `configure` in the file called `settings.conf` you could use `cat settings.conf | grep configure`. Or if you wanted numbered lines you could use `nl settings.conf | grep configure`. To do a case _insensitive_ filter, use the `-i` flag.
-- `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
-- `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
-
-## Downloading files
-
-### `curl`
-
-The `curl` command can be used to download files or data from a host, and POST data to a host:
-
-- `curl example.com/file.zip`: Downloads the file from the location `example.com/file.zip`.
-- `curl cheat.sh/curl`: Downloads information from `cheat.sh` on `curl`.
-- `curl wttr.in`: Downloads weather information for your location, and prints it in the terminal.
-- `curl wttr.in/auckland`: Downloads weather information for a specified location (in this case Auckland), and prints it in the terminal.
-- `curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com`: POST json data to `example.com`.
-
-### `wget`
-
-The `wget` command can be used to download a single or multiple files, or even entire websites.
-
-- `wget example.com/index.html`: Downloads the file from the location `example.com/index.html`.
-- `wget -r ftp:example.com/directory`: Downloads a folder from the location specified.
-- `wget -m -convert-links -page-requisites example.com`: Downloads the entire public-facing website for `example.com`.
-- `wget -c`: Resumes a previous download that didn't finish.
-
-## Compressing or decompressing files
-
-### `gzip`
-
-`gzip` is the 'classic' compression tool, for working with `.gz` files:
-
-- `gzip data.txt`: Compresses the file `data.txt`, and gives it a `.gz` extension.
-- `gzip -8 data.txt`: Compresses the file `data.txt` with a better and slower level of compression (the levels range from `1` - fastest but least compression - to `9` - slowest but best compression).
-- `gzip -r data`: Compresses the folder called `data`, and gives it a `.gz` extension.
-- `gzip -d data.gz`: Decompresses the file `data.gz`.
-
-### `tar` archives
-
-`tar` files are archives that contain multiple files:
-
-- `tar -cf archive.tar file1 file2`: Creates an archive called `archive.tar` with the files `file1` and `file2`.
-- `tar -xf archive.tar`: Extracts the contents of `archive.tar`.
-- `tar -tf archive.tar`: View the contents of `archive.tar`.
-
-A `tar` archive can be compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
-
-- `tar czvf compressed.tar.gz data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.gz`.
-- `tar tzvf compressed.tar.gz`: Views the contents of `compressed.tar.gz`.
-- `tar xzvf compressed.tar.gz`: Decompresses a `.tar.gz` file.
-- `tar cjvf compressed.tar.bz2 data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.bz2`.
-- `tar tjvf compressed.tar.bz2`: Views the contents of `compressed.tar.bz2`.
-- `tar xjvf compressed.tar.bz2`: Decompresses the file `compressed.tar.bz2`.
 
 ## Networking
 
