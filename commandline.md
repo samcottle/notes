@@ -45,6 +45,7 @@ There are several commands that can be used for finding files:
 
 - `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. To find files in a specific folder (such as all `.conf` files in the folder `/etc`), you would use `find /etc -name *.conf`.
 - `whereis`: Finds a binary file. `whereis ls` would display the location of the `ls` command.
+- `which`: Finds programs, and prints their location. For example, `which ls` prints `/usr/bin/ls`.
 
 ## Logging
 
@@ -271,6 +272,27 @@ Here are some commands you can do this with:
 - `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
 - `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
 
+## Downloading files
+
+### `curl`
+
+The `curl` command can be used to download files or data from a host, and POST data to a host:
+
+- `curl example.com/file.zip`: Downloads the file from the location `example.com/file.zip`.
+- `curl cheat.sh/curl`: Downloads information from `cheat.sh` on `curl`.
+- `curl wttr.in`: Downloads weather information for your location, and prints it in the terminal.
+- `curl wttr.in/auckland`: Downloads weather information for a specified location (in this case Auckland), and prints it in the terminal.
+- `curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com`: POST json data to `example.com`.
+
+### `wget`
+
+The `wget` command can be used to download a single or multiple files, or even entire websites.
+
+- `wget example.com/index.html`: Downloads the file from the location `example.com/index.html`.
+- `wget -r ftp:example.com/directory`: Downloads a folder from the location specified.
+- `wget -m -convert-links -page-requisites example.com`: Downloads the entire public-facing website for `example.com`.
+- `wget -c`: Resumes a previous download that didn't finish.
+
 ## Compressing or decompressing files
 
 ### `gzip`
@@ -284,7 +306,12 @@ Here are some commands you can do this with:
 
 ### `tar` archives
 
-`tar` archives are often compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
+`tar` files are archives that contain multiple files:
+
+- `tar -cf archive.tar file1 file2`: Creates an archive called `archive.tar` with the files `file1` and `file2`.
+- `tar -xf archive.tar`: Extracts the contents of `archive.tar`.
+
+A `tar` archive can be compressed using `gzip` (resulting in a file with the extension `.tar.gz`) or `bzip2` (resulting in a file with the extension `.tar.bz2`):
 
 - `tar czvf compressed.tar.gz data.txt`: Compresses the file `data.txt` as a file called `compressed.tar.gz`.
 - `tar tzvf compressed.tar.gz`: Views the contents of `compressed.tar.gz`.
@@ -305,15 +332,6 @@ Here are some commands you can do this with:
 ## App-specific commands
 
 Commands for other CLI apps I use frequently.
-
-### `curl`
-
-The `curl` command can be used to download files or data from a host, and POST data to a host:
-
-- `curl cheat.sh/curl`: Downloads information from `cheat.sh` on `curl`.
-- `curl wttr.in`: Downloads weather information for your location, and prints it in the terminal.
-- `curl wttr.in/auckland`: Downloads weather information for a specified location (in this case Auckland), and prints it in the terminal.
-- `curl -H "Content-Type: application/json" -X POST -d '{"user":"bob","pass":"123"}' http://example.com`: POST json data to `example.com`.
 
 ### Glow
 
