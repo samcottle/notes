@@ -8,7 +8,7 @@ To create and run a shell script, you need to:
 2. Make it executable (in other words, set the file permissions to make it executable).
 3. Put it somewhere that the shell can find it (i.e. in a folder where it can be executed).
 
-## Example: Hello world!
+## Example: Hello world
 
 The following is a really basic "Hello World!" example.
 
@@ -36,7 +36,7 @@ Make the script executable with `chmod 755 hello_world` (this will make it so th
 
 ### Step 3: Put it somewhere the shell can find it
 
-If you are in the same folder as the script, and you have _execute_ permissions, you will be able to execute the sript with `./hello_world`.
+If you are in the same folder as the script, and you have _execute_ permissions, you will be able to execute the script with `./hello_world`.
 
 If you are in any other directory, you will need to specify an explicit path to the script (otherwise you will get a **command not found** error).
 
