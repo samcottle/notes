@@ -56,7 +56,9 @@ But before an indefinite object. For example:
 
 ### Separable verbs
 
-These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence. While _separable verbs_ don't exist in English, they are similar to what are known as _phrasal verbs_, like _stand up_, _write down_, _fill in_, and _hang out_.
+These are verbs that can be split in two parts (a prefix and a verb), with each part moved around in the sentence.
+
+While _separable verbs_ don't exist in English, they are similar to what are known as _phrasal verbs_, like _stand up_, _write down_, _fill in_, and _hang out_.
 
 Some examples of separable verbs being split:
 
