@@ -43,7 +43,7 @@ Useful directories within a 'standard' Linux filesystem include:
 
 There are several commands that can be used for finding files:
 
-- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. To find files in a specific folder (such as all `.conf` files in the folder `/etc`), you would use `find /etc -name *.conf`.
+- `find`: Finds a file. `find -name myfile.txt` would display the location of all files with the name `myfile.txt`. To find files in a specific folder (such as all `.conf` files in the folder `/etc`), you would use `find /etc -name *.conf`. You can also use find to search for files using other parameters, such as a specific file size range, or have been modified within a certain number of days.
 - `whereis`: Finds a binary file. `whereis ls` would display the location of the `ls` command.
 - `which`: Finds programs, and prints their location. For example, `which ls` prints `/usr/bin/ls`.
 
