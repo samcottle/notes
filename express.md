@@ -53,10 +53,16 @@ const app = express();
 
 Then, we use the `.get()` method to tell the application to listen for GET requests on the path `/`.  The `req` and `res` represent the HTTP request and response - both of which can be handled using a callback.
 In this case, the callback being used is the [`res.send()`](http://expressjs.com/en/api.html#res.send) method, to send the string `"Hello world!"` to the client.
-`app.get("/", (req, res) => res.send("Hello world!"));`
+
+```js
+app.get("/", (req, res) => res.send("Hello world!"));
+```
 
 Finally, we're telling the app to start a server, to listen on port 3000. We also log some information to the console, so the human starting the server can see which port the app is listening on.
-`app.listen(3000, () => console.log("Server ready on port 3000"));`
+
+```js
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
 
 ## HTTP methods
 
