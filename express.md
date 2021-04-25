@@ -6,8 +6,8 @@
 
 After [installing Node.js](https://nodejs.org/en/download/package-manager/), Express can be installed with:
 
-```js
-npm install express --save
+```bash
+$ npm install express --save
 ```
 
 Alternatively, `express` can specified in the `dependencies` in a `package.json` file, and then installed with `npm install -y`.
