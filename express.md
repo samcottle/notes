@@ -99,7 +99,7 @@ A full list of request callbacks, and details of each, can be found in the [Expr
 
 These are strings that come after a URL path, and are used to pass variables from an HTTP request. Query strings start with a `?`; variables are assigned a value with an `=`; multiple variables are separated with an `&`. For example:
 
-```
+```text
 https://www.example.com?name=Sam&username=samcottle
 ```
 
@@ -120,8 +120,8 @@ app.listen(3000, () => console.log("Server ready on port 3000"));
 
 When this server is running, any variables specified in a query string after on the path `/` will be logged as a JSON object to the console (unless there are no variables, in which case an empty object will be logged). The example above would log the following:
 
-```
-{ name: 'Sam', username: 'samcottle' }
+```js
+{ name: "Sam", username: "samcottle" }
 ```
 
 ##### Other examples
@@ -132,7 +132,7 @@ You can access the value of a specific property provided in a query string. For 
 
 ...
 app.get("/", (req, res) => {
-	console.log(req.query.name);
+  console.log(req.query.name);
 });
 
 ...
@@ -144,9 +144,9 @@ A `for...in` loop can be used to iterate over all the the properties in a query 
 ...
 
 app.get("/", (req, res) => {
-	for (const key in req.query) {
-		console.log(key, req.query[key]);
-	}
+  for (const key in req.query) {
+    console.log(key, req.query[key]);
+  }
 });
 
 ...
@@ -291,6 +291,65 @@ Cookies can be cleared with `res.clearCookie()`, by passing in the name of the c
 app.get("/admin", (req, res) =>
   res.clearCookie("name");
 );
+
+...
+```
+
+## Working with HTTP headers
+
+[HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) let a client and server pass additional information in a request or response.
+
+Express can use this to determine authentication information, the type of content that is being transmitted, the client's user agent, and more.
+
+### Accessing request headers
+
+To access _all_ headers included in a request, use the `req.headers` property. For example, to log all the request headers to the console:
+
+```js
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  console.log(req.headers);
+});
+
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+Specific headers can be accessed with `req.header`. For example, to log just the `User-Agent` to the console:
+
+```js
+...
+
+app.get("/", (req, res) => {
+  console.log(req.header("User-Agent"));
+});
+
+...
+```
+
+### Changing response headers
+
+The `res.set()` method can be used to specify the HTTP header type of a response. For example, to set the `Content-Type` as `text/html`:
+
+```js
+...
+
+res.set("Content-Type", "text/html");
+
+...
+```
+
+If you don't need to set anything more than the `Content-Type` header, then [`res.type()`](https://expressjs.com/en/api.html#res.type) can also be used:
+
+```js
+...
+
+res.type(".html"); // => 'text/html'
+res.type("html"); // => 'text/html'
+res.type("json"); // => 'application/json'
+res.type("application/json"); // => 'application/json'
+res.type("png"); // => 'image/png'
 
 ...
 ```
