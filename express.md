@@ -328,7 +328,7 @@ app.get("/", (req, res) => {
 ...
 ```
 
-### Changing response headers
+### Setting response headers
 
 The `res.set()` method can be used to specify the HTTP header type of a response. For example, to set the `Content-Type` as `text/html`:
 
@@ -345,11 +345,13 @@ If you don't need to set anything more than the `Content-Type` header, then [`re
 ```js
 ...
 
-res.type(".html"); // => 'text/html'
-res.type("html"); // => 'text/html'
-res.type("json"); // => 'application/json'
-res.type("application/json"); // => 'application/json'
-res.type("png"); // => 'image/png'
+res.type(".html"); // Is equivalent to 'text/html'
+res.type("html"); // Is equivalent to 'text/html'
+res.type("json"); // Is equivalent to 'application/json'
+res.type("application/json"); // Is equivalent to 'application/json'
+res.type("png"); // Is equivalent to 'image/png'
 
 ...
 ```
+
+In many cases Express will set a `Content-Type` automatically. In this case, `res.type()` can be used to set a different `Content-Type`.
