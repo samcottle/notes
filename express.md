@@ -227,7 +227,7 @@ app.get("/user", (req, res) =>
 
 ### Sending an empty response
 
-If you don't have anything to send to the client, the [`res.end()`](https://expressjs.com/en/api.html#res.end) method can be used:
+If you don't have anything to send to the client, the [`res.end()`](https://expressjs.com/en/api.html#res.end) method can be used to close the connection to the client:
 
 ```js
 ...
@@ -239,8 +239,6 @@ app.get("/", (req, res) => {
 
 ...
 ```
-
-This also closes the connection to the client.
 
 ### Managing cookies
 
