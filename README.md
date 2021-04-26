@@ -1,9 +1,4 @@
 # Notes
-These are my notes and personal cheat-sheets, created when I'm learning a new topic or skill. 
+These are my notes and cheat-sheets, that I've created to help learn about a new topic or skill. All are intended for my own personal use. 
 
-I've written them for my own personal use, and are by no means a complete *Guide to x*.
-
-That being said, if you find any of them useful, please feel free to use them.
-
-Cheers,
-Sam
+For more comprehensive notes on particular topics, [Learn x in y minutes website](https://learnxinyminutes.com/) is recommended.
