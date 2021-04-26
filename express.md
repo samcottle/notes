@@ -27,6 +27,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => res.send("Hello world!"));
+
 app.listen(3000, () => console.log("Server ready on port 3000"));
 ```
 
@@ -44,14 +45,14 @@ $ node index.js
 
 So what does the above code actually do?
 
-First, we are importing the `express` package into our application (assigning it the value `express`), and instantiating it. 
+First, we are importing the `express` package into our application (assigning it the value `express`), and instantiating it.
 
 ```js
 const express = require("express");
 const app = express();
 ```
 
-Then, we use the `.get()` method to tell the application to listen for GET requests on the path `/`.  The `req` and `res` represent the HTTP request and response - both of which can be handled using a callback.
+Then, we use the `.get()` method to tell the application to listen for GET requests on the path `/`. The `req` and `res` represent the HTTP request and response - both of which can be handled using a callback.
 In this case, the callback being used is the [`res.send()`](http://expressjs.com/en/api.html#res.send) method, to send the string `"Hello world!"` to the client.
 
 ```js
@@ -66,14 +67,24 @@ app.listen(3000, () => console.log("Server ready on port 3000"));
 
 ## HTTP methods
 
-Express has built-in methods representing each HTTP verb:
+Express has built-in methods representing each [HTTP verb](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods). For example:
 
 ```js
-app.get("/", (req, res) => { /* callback */ });
-app.post("/", (req, res) => { /* callback */ });
-app.put("/", (req, res) => { /* callback */ });
-app.delete("/", (req, res) => { /* callback */ });
-app.patch("/", (req, res) => { /* callback */ });
+app.get("/", (req, res) => {
+  /* callback */
+});
+app.post("/", (req, res) => {
+  /* callback */
+});
+app.put("/", (req, res) => {
+  /* callback */
+});
+app.delete("/", (req, res) => {
+  /* callback */
+});
+app.patch("/", (req, res) => {
+  /* callback */
+});
 ```
 
 Each of these accepts a callback function, which is called when the request is started.
@@ -101,8 +112,8 @@ const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => {
-	console.log(req.query);
-}); 
+  console.log(req.query);
+});
 
 app.listen(3000, () => console.log("Server ready on port 3000"));
 ```
@@ -116,12 +127,13 @@ When this server is running, any variables specified in a query string after on 
 ##### Other examples
 
 You can access the value of a specific property provided in a query string. For example, the value of `name`:
-```
+
+```js
 
 ...
 app.get("/", (req, res) => {
 	console.log(req.query.name);
-}); 
+});
 
 ...
 ```
@@ -135,7 +147,7 @@ app.get("/", (req, res) => {
 	for (const key in req.query) {
 		console.log(key, req.query[key]);
 	}
-}); 
+});
 
 ...
 ```
@@ -144,7 +156,7 @@ app.get("/", (req, res) => {
 
 These are typically sent from a form (`Content-Type: application/x-www-form-urlencoded`), or a POST request that sent JSON data (`Content-Type: application/json`).
 
-POSTed data can be accessed by referencing it from the [`req.body`](http://expressjs.com/en/api.html#req.body)(for example, `req.body.name`). 
+POSTed data can be accessed by referencing it from the [`req.body`](http://expressjs.com/en/api.html#req.body)(for example, `req.body.name`).
 
 Depending on how the data was sent, you will need to use middleware to handle the data being POSTed.
 
@@ -156,15 +168,129 @@ app.use(express.urlencoded()); // Middleware to handle JSON data sent as `Conten
 app.use(express.json()); // Middleware to handle JSON data sent as `Content-Type: application/json`
 
 app.post("/post", (req, res) => {
-	const name = req.body.name;
-	console.log(req.body.name);
-}); 
+  const name = req.body.name;
+  console.log(req.body.name);
+});
 
 app.listen(3000, () => console.log("Server ready on port 3000"));
 ```
 
 ## Sending responses
 
+Response types can include data such as objects or arrays, text, and more. Here we'll cover off some of the common use cases that relate to sending responses.
+
 A full list of response callbacks, and details of each, can be found in the [Express documentation](http://expressjs.com/en/api.html#res).
 
-TODO
+### Sending a basic response
+
+The Hello world example used [`res.send()`](https://expressjs.com/en/api.html#res.send) to send a HTTP response, the text string `"Hello world!"`, to the client.
+
+When passing a text string or some HTML into this method, Express automatically sets the `Content-Type` as `text/html`. Similarly, by passing in a JSON object or array the `Content-Type` is set to `application/json` (although `res.json()` should really be used instead).
+
+Once `res.send()` has done its thing, it closes the connection.
+
+### Sending the HTTP response status
+
+The [`res.status()`](https://expressjs.com/en/api.html#res.status) method can be used to send a [HTTP status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) to the client:
+
+```js
+const express = require("express");
+const app = express();
+
+app.get("/404", (req, res) => res.status(404).send("File not found"));
+
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+If you don't need to send a fancy message to the client then [`res.sendStatus()`](https://expressjs.com/en/api.html#res.sendStatus) can be used instead. This sends a string representation of the HTTP status to the client. For example:
+
+```js
+res.sendStatus(200); // Is equivalent to res.status(200).send('OK')
+res.sendStatus(403); // Is equivalent to res.status(403).send('Forbidden')
+res.sendStatus(404); // Is equivalent to res.status(404).send('Not Found')
+res.sendStatus(500); // Is equivalent to res.status(500).send('Internal Server Error')
+```
+
+### Sending JSON
+
+The advised way to send a JSON response is with the [`res.json()`](https://expressjs.com/en/api.html#res.json) method (as opposed to `res.send({/* JSON here */})`). Any JSON object, array, string, Boolean, number, or `null` can be sent - and any other content will be automatically converted to JSON using [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
+
+```js
+...
+
+app.get("/user", (req, res) =>
+  res.json({ "name": "Sam", "username": "samcottle" })
+);
+
+...
+```
+
+### Sending an empty response
+
+If you don't have anything to send to the client, the [`res.end()`](https://expressjs.com/en/api.html#res.end) method can be used:
+
+```js
+...
+
+app.get("/", (req, res) => {
+  console.log(req.query);
+  res.end();
+});
+
+...
+```
+
+This also closes the connection to the client.
+
+### Managing cookies
+
+The [`res.cookie()`](https://expressjs.com/en/api.html#res.cookie) method can be used to set or manipulate a cookie.
+
+A basic example of this is to create a cookie containing a username:
+
+```js
+...
+
+res.cookie("name", "sam");
+
+...
+```
+
+Additional parameters can be passed in an object when setting the cookie, such as the `domain`, whether the cookie should only be used for `secure` sessions, and a date the cookie `expires` (this can also be done with `maxAge`):
+
+```js
+...
+
+res.cookie("name", "sam", { domain: ".github.com", path: "/account", secure: true });
+res.cookie("name", "sam", { expires: new Date(Date.now() + 900000) });
+
+...
+```
+
+The example above set two cookies: one with account details, and another with the expiry date.
+
+Objects can also be passed in the `value` parameter, which can be useful for use cases like tracking the items in a user's shopping cart:
+
+```js
+...
+
+res.cookie("cart", { items: [7, 4, 5] }, { maxAge: 900000 });
+
+...
+```
+
+For a full list of parameters that can be used when setting cookies, see the [Express documentation](https://expressjs.com/en/api.html#res.cookie).
+
+#### Clearing a cookie
+
+Cookies can be cleared with `res.clearCookie()`, by passing in the name of the cookie (from the example above, this would be `name`):
+
+```js
+...
+
+app.get("/admin", (req, res) =>
+  res.clearCookie("name");
+);
+
+...
+```
