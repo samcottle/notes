@@ -5,7 +5,7 @@ A _shell script_ is a file containing a series of commands. The shell reads the 
 To create and run a shell script, you need to:
 
 1. Write the script.
-2. Make it executable (in other words, set the file permissions to make it executable).
+2. Make it executable (in other words, set the file permissions to allow this).
 3. Put it somewhere that the shell can find it (i.e. in a folder where it can be executed).
 
 ## Example: Hello world
@@ -43,7 +43,7 @@ If you are in any other directory, you will need to specify an explicit path to 
 Alternatively, to make the script accessible from anywhere, add the script to one of the default directories that the system checks in for executables (`/usr/local/bin`, for example; you can get a list of these directories using the command `echo $PATH`):
 
 ```bash
-$ mv hello_world /usr/bin
+$ mv hello_world /usr/local/bin
 $ hello_world
 Hello World!
 ```
@@ -52,7 +52,7 @@ Scripts you've created yourself should live in the `/usr/local/bin` directory (o
 
 ## Best practices
 
-To make a shell script easier to maintain, the following are recommended.
+To make a shell script easier to maintain, the following practices are recommended.
 
 ### Use long option commands
 
@@ -81,8 +81,10 @@ find ~ \
     -or
     \( \
         -type d \
-        -not -perm 0700 \
+        -not -perm 0700  donates the end of a line.\
     \)
 ```
 
-To indent a shell script, tab-spaces can also be used (depending on which style guide is being followed), and a `\` donates the end of a line.
+Double, triple, or tab-spaces can be used (depending on the style guide being followed).
+
+The end of each line can be denoted with a `\`.
