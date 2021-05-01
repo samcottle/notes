@@ -50,6 +50,59 @@ Hello World!
 
 Scripts you've created yourself should live in the `/usr/local/bin` directory (or `/usr/local/sbin` if you're a system administrator). The directories `/bin` and `/usr/bin` are often reserved for binaries that are pre-installed on your operating system (as per the Linux Filesystem Hierarchy Standard).
 
+## Using variables can constants
+
+Bash constants use the format `$CONSTANT`, and variables use the format `$variable`. This is how they are declared in shell scripts:
+
+```bash
+CONSTANT="A constant is declared like this."
+variable="A variable is declared like this."
+```
+
+You can also declare a variable within a variable (or a constant within a constant):
+
+```bash
+#!/bin/bash
+
+# Program for outputting system information to HTML file
+
+TITLE="System report for $HOSTNAME"
+CURRENT_TIME=$(date +"%x %r %Z")
+TIME_STAMP="Generated $CURRENT_TIME, by $USER"
+
+echo "<HTML>
+    <HEAD>
+        <TITLE>$TITLE</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>$TITLE</H1>
+        <P>$TIME_STAMP</P>
+    </BODY>
+</HTML>"
+```
+
+In this case, `$HOSTNAME` and `$USER` are _Bash variables_; these are provided by your system, so don't need to declared explicitly in the script. A list of Bash variables can be found in the [Bash manual](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html).
+
+Variables can be assigned in the formats:
+
+```bash
+a=b
+c="String"
+d="A string and a $variable"
+
+# The result of a command
+e=$(ls -la)
+
+# Mathematical expansion
+f=((4 * 2))
+
+# Escape sequences, such as tabs and new lines
+g="\t\Tabbed content\n"
+
+# Multiple variables can occupy the same line
+h="The first variable is " i=42
+```
+
 ## Best practices
 
 To make a shell script easier to maintain, the following practices are recommended.
@@ -59,6 +112,22 @@ To make a shell script easier to maintain, the following practices are recommend
 Many commands can be expressed as both short and long options. For example, `ls -a` can also be expressed as `ls --all`; the result is identical for both.
 
 While it is quicker to use a short option when working directly in the shell, using the long option is easier to read when looking at a shell script.
+
+### Variables and constants
+
+Bash constants use the format `$CONSTANT`, and variables use the format `$variable`.
+
+Curly braces can optionally be used to make them visually stand out in a script, or to ensure the shell interprets the script correctly:
+
+```bash
+# The following would not work
+mv $file $file1
+
+# The following would
+mv $file ${file}1
+
+# This is because the shell is interpreting the 1 as part of the variable name
+```
 
 ### Indentation and formatting
 
