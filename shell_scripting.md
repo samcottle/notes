@@ -58,7 +58,7 @@ $ hello_world
 Hello World!
 ```
 
-Scripts you've created yourself should live in the `/usr/local/bin` directory (or `/usr/local/sbin` if you're the system administrator). Don't use `/bin` or `/usr/bin`, as these are reserved for binaries that come pre-installed with your operating system.
+Scripts you've created yourself typically live in the `/usr/local/bin` directory (or `/usr/local/sbin` if you're the system administrator). Don't use `/bin` or `/usr/bin`, as these are reserved for binaries that come pre-installed with your operating system.
 
 ## Using variables and constants
 
@@ -146,7 +146,7 @@ When working with script that are long or contain conditionals (e.g. `-and`, -`o
 For example, the command to find all the files and subdirectories in a directory with secure permissions (i.e. not `0600` and `0700`) can be expressed like this:
 
 ```bash
-$ find ~ \(-type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
+$ find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)
 ```
 
 This command can also be expressed so that it's more readable:
