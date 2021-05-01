@@ -166,4 +166,4 @@ find ~ \
 
 Double, triple, or tab-spaces can be used (depending on the style guide being followed).
 
-The end of each line can be denoted with a `\`.
+The end of each line needs to be denoted with a `\`.
