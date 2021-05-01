@@ -26,7 +26,7 @@ Edit the file, and include:
 echo "Hello World!"
 ```
 
-When run, this script will `echo` (i.e. print or log) the string _Hello World!_ in the terminal.
+When run, this script will `echo` (i.e. print) the string _Hello World!_ in the terminal.
 
 Save the file.
 
@@ -36,11 +36,21 @@ Make the script executable with `chmod 755 hello_world` (this will make it so th
 
 ### Step 3: Put it somewhere the shell can find it
 
-If you are in the same folder as the script, and you have _execute_ permissions, you will be able to execute the script with `./hello_world`.
+If you are in the same folder as the script, you will be able to execute the script with:
 
-If you are in any other directory, you will need to specify an explicit path to the script (otherwise you will get a **command not found** error).
+```bash
+$ ./hello_world
+Hello World!
+```
 
-Alternatively, to make the script accessible from anywhere, add the script to one of the default directories that the system checks in for executables (`/usr/local/bin`, for example; you can get a list of these directories using the command `echo $PATH`):
+If you are in another directory, you will need to specify the explicit path to the script (otherwise you will get the error message `command not found`):
+
+```bash
+$ ./home/sam/scripts/hello_world
+Hello World!
+```
+
+To make the script accessible from anywhere in the filesystem, add the script to a directory that is used for executables (`/usr/local/bin`, for example; you can get a list of these directories using the command `echo $PATH`):
 
 ```bash
 $ mv hello_world /usr/local/bin
@@ -48,9 +58,9 @@ $ hello_world
 Hello World!
 ```
 
-Scripts you've created yourself should live in the `/usr/local/bin` directory (or `/usr/local/sbin` if you're a system administrator). The directories `/bin` and `/usr/bin` are often reserved for binaries that are pre-installed on your operating system (as per the Linux Filesystem Hierarchy Standard).
+Scripts you've created yourself should live in the `/usr/local/bin` directory (or `/usr/local/sbin` if you're the system administrator). Don't use `/bin` or `/usr/bin`, as these are reserved for binaries that come pre-installed with your operating system.
 
-## Using variables can constants
+## Using variables and constants
 
 Bash constants use the format `$CONSTANT`, and variables use the format `$variable`. This is how they are declared in shell scripts:
 
@@ -81,17 +91,17 @@ echo "<HTML>
 </HTML>"
 ```
 
-In this case, `$HOSTNAME` and `$USER` are _Bash variables_; these are provided by your system, so don't need to declared explicitly in the script. A list of Bash variables can be found in the [Bash manual](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html).
+In this case, `$HOSTNAME` and `$USER` are _Bash variables_; these are provided by your system, so don't need to be declared in the script. A list of Bash variables can be found in the [Bash manual](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html).
 
-Variables can be assigned in the formats:
+Ways that variables can be assigned include:
 
 ```bash
 a=b
-c="String"
+c="A string"
 d="A string and a $variable"
 
 # The result of a command
-e=$(ls -la)
+e=$(ls -l)
 
 # Mathematical expansion
 f=((4 * 2))
@@ -99,8 +109,8 @@ f=((4 * 2))
 # Escape sequences, such as tabs and new lines
 g="\t\Tabbed content\n"
 
-# Multiple variables can occupy the same line
-h="The first variable is " i=42
+# Multiple variables can be assigned on the same line
+h="The answer to the ultimate question of life, the universe, and everything is " i=42
 ```
 
 ## Best practices
