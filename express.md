@@ -328,7 +328,7 @@ app.get("/", (req, res) => {
 
 ### Setting response headers
 
-The `res.set()` method can be used to specify the HTTP header type of a response. For example, to set the `Content-Type` as `text/html`:
+The [`res.set()`](http://expressjs.com/en/api.html#res.set) method can be used to specify the HTTP header type of a response. For example, to set the `Content-Type` as `text/html`:
 
 ```js
 ...
