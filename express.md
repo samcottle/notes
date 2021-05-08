@@ -353,3 +353,20 @@ res.type("png"); // Is equivalent to 'image/png'
 ```
 
 In many cases Express will set a `Content-Type` automatically. In this case, `res.type()` can be used to set a different `Content-Type`.
+
+## Redirects
+
+The [res.redirect()](http://expressjs.com/en/api.html#res.redirect) method can be used to redirect to an relative or absolute URL, back a level, or `back` to the previous page.
+
+```js
+...
+
+app.get("/", (req, res) => {
+  res.redirect("/newpage"); // Redirect to the relative URL
+  // res.redirect("https://www.example.com"); // Redirect to absolute URL
+  // res.redirect(".."); // Redirect back a level
+  // res.redirect("back"); // Redirect to previous page
+});
+
+...
+```
