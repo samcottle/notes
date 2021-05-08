@@ -352,21 +352,38 @@ res.type("png"); // Is equivalent to 'image/png'
 ...
 ```
 
-In many cases Express will set a `Content-Type` automatically. In this case, `res.type()` can be used to set a different `Content-Type`.
+In many cases Express will set a `Content-Type` automatically. In this case, [`res.type()`](https://expressjs.com/en/api.html#res.type) can be used to set a different `Content-Type`.
 
-## Redirects
+## Routing
 
-The [res.redirect()](http://expressjs.com/en/api.html#res.redirect) method can be used to redirect to an relative or absolute URL, back a level, or `back` to the previous page.
+Routing determines what happens when a URL is called. For example, what happens when a browser tries to access `/page-x` or `/page-y` on your website:
+
+```js
+const express = require("express");
+const app = express();
+
+app.get("/page-x", (req, res) => res.send("Welcome to Page X!"));
+app.get("/page-y", (req, res) => res.send("Welcome to Page Y!"));
+
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+### Redirecting
+
+If a page or content has moved (i.e. a route no longer exists) it is good practice to redirect users, so they don't get a `404` error page.
+
+The [res.redirect()](http://expressjs.com/en/api.html#res.redirect) method can be used to redirect to a relative or absolute URL, redirect up a level (i.e. `..`), or redirect back (i.e. `back`) to the previous page.
+
+For example, if `/page-x` is deleted, and you want users to go to `/page-z` instead:
 
 ```js
 ...
 
-app.get("/", (req, res) => {
-  res.redirect("/newpage"); // Redirect to the relative URL
-  // res.redirect("https://www.example.com"); // Redirect to absolute URL
-  // res.redirect(".."); // Redirect back a level
-  // res.redirect("back"); // Redirect to previous page
+app.get("/page-x", (req, res) => {
+  res.redirect("/page-z");
 });
+
+app.get("/page-z", (req, res) => res.send("Welcome to Page Z! We had to delete Page X"));
 
 ...
 ```
