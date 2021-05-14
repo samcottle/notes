@@ -387,3 +387,29 @@ app.get("/page-z", (req, res) => res.send("Welcome to Page Z! We had to delete P
 
 ...
 ```
+
+### Using RegEx
+
+[Regular expressions](https://github.com/samcottle/notes/blob/master/regex.md) can be used to match multiple paths or routes with one statement. For example, the following will match `/page-x`, `/page-y`, `/pagepagepage`, and any other route with `page` in it.
+
+```js
+...
+
+app.get(/page/, (req, res) => res.send("All pages lead to here."));
+
+...
+```
+
+### Using named parameters
+
+Let's say we want to build a service that accepts a string and returns that string uppercase (using the [`.toUpperCase()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) JavaScript method). One way of doing this would be a query string. But we can also use a named parameter in part of the URL:
+
+```js
+...
+
+app.get("/uppercase-converter/:namedValue", (req, res) => res.send(req.params.namedValue.toUpperCase()));
+
+...
+```
+
+Now if we send a request to `/uppercase-converter/test`, we get `TEST` in the response body.
