@@ -409,7 +409,79 @@ Let's say we want to build a service that accepts a string and returns that stri
 
 app.get("/uppercase-converter/:namedValue", (req, res) => res.send(req.params.namedValue.toUpperCase()));
 
-...
+...https://www.outsideonline.com/2399404/van-life-difficulties?utm_campaign=facebookpost&utm_medium=social&utm_source=facebook
 ```
 
 Now if we send a request to `/uppercase-converter/test`, we get `TEST` in the response body.
+
+## CORS and Preflight
+
+When accessing resources from another domain, subdomain, port, or protocol, some types of requests will fail. Examples include `fetch()` requests, loading a `@font-face`, or an `XMLHttpRequest`. This is behavior is implemented by the browser to prevent potentially malicious content from being loaded.
+
+But if you are sure that there is nothing nefarious going on (e.g. you control the server and the client) then Cross-Origin Resource Sharing (CORS) can be used to allow resources to be shared. The simplest way to do this is to include the `cors` middleware in your app:
+
+```js
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+app.get("/no-cors", (req, res, next) => {
+  res.json({ msg: "Uh-oh, no CORS :(" });
+});
+
+app.get("/cors", cors(), (req, res, next) => {
+  res.json({ msg: "Works with CORS :)" });
+});
+
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+TODO
+
+## Templating with Pug
+
+There are many templating engines for Express, such as Handlebars, EJS, and Moustache. The default is [Pug](https://pugjs.org/), which we'll cover here.
+
+Pug templates use `.pug` files.
+
+### Hello Pug world!
+
+1. Install Pug with:
+
+```bash
+$ npm install pug
+```
+
+2. Add Pug in your app, by initializing and setting it:
+
+```js
+const express = require("express");
+const app = express();
+
+app.set("view engine", "pug");
+
+// Create views here
+
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+3. Create a view (i.e. a page you want rendered on a specific route):
+
+```js
+...
+
+app.get("/hello", (req, res) => {
+  res.render("hello-world");
+});
+```
+
+4. Create a template for the view in `/views/hello-world.pug`:
+
+```text
+p Hello Pug world!
+```
+
+**Note:** The `p` is the equivalent of the `<p>` tag.
+
+5. Launch a browser, and navigate to `localhost:3000/hello` to see the text.
