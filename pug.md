@@ -1,6 +1,6 @@
-# The Pug templating engine
+# Pug templating
 
-[Pug](https://pugjs.org/) is the default templating engine for [Express](/express.md). Pug templates use `.pug` files.
+[Pug](https://pugjs.org/) is the default templating engine for [Express](/express.md). Pug templates are stored in `.pug` files.
 
 ## Hello world!
 
@@ -43,9 +43,7 @@ p Hello world!
 
 ## Formatting
 
-Unlike HTML, Pug doesn't use closing tags (i.e. does not have the equivalent of something like `</h1>`). Instead it uses indentation to achieve the same result.
-
-Also, attributes (such as `href`) are added using brackets.
+Content can be formatted using common HTML tags. Each tag is defined with a new line, and indentation creates the HTML tree structure. Attributes (such as `href`) are defined within brackets.
 
 For example:
 
@@ -85,13 +83,11 @@ This is the equivalent to the following HTML:
 />
 ```
 
-More information on Pug formatting is available in the **Language Reference** of the [Pug documentation](https://pugjs.org).
-
-To convert bulk HTML to Pug you can use [this converter](https://jsonformatter.org/html-to-jade).
+More information on Pug formatting is available in the **Language Reference** of the [Pug documentation](https://pugjs.org). Or use [this HTML to Pug](https://jsonformatter.org/html-to-jade) converter.
 
 ## Using scripts and styles
 
-External JavaScript and CSS can be added as follows:
+To use external JavaScript and CSS files:
 
 ```text
 html
@@ -101,7 +97,7 @@ html
     link(rel="stylesheet", href="css/main.css")
 ```
 
-JavaScript can also be added inline:
+To use JavaScript inline:
 
 ```text
 script
@@ -110,59 +106,54 @@ script
 
 ## Including other Pug files
 
-Other Pug files can be included as follows:
+Other Pug templates can be included as follows:
 
 ```text
 include otherfile.pug
 ```
 
-## Using blocks
+## Template inheritance
 
-To keep your content clean and organized, you'll typically want to create a base template. All other templates extend from this.
+_Template inheritance_ can be used to keep content clean and organized.
+
+This is where a template is used as a base (a _default template_); other templates (_child templates_) inherit content from the base.
 
 ### Creating a base template
 
-Include some `block`s. These are sections of the base template that you want to customize per page.
+Create a `.pug` file that will act the base template.
 
-For example, the `head` (i.e. `block head`) and `body` (i.e. `block body`):
+Use `block`s to define content that a child template may replace (such as a `block body` for the body):
 
 ```text
 html
     head
-        script(src="script.js")
-
-        link(rel="stylesheet", href="css/main.css")
         block head
+            script(src="script.js")
+            link(rel="stylesheet", href="css/main.css")
     body
         block body
             h1 Home page
-            p welcome
+            p Welcome
 ```
 
 ### Extending the base template
 
-To extend from a base template, create a new `.pug` file for your new template.
+Create a `.pug` file for your child template.
 
-In the new template, use the `extends` keyword to define the base template being used:
+In this file, use the `extends` keyword to define the base template you want to use, and redefine any `block`s that you want to replace in the child page. For example, to replace the `block body`:
 
 ```text
 extends home.pug
-...
-```
 
-Then redefine any `block`s that you want changed from the base template:
-
-```text
-...
 block body
-    h1 Another page
-    p Welcome to another page! Here's a list:
+    h1 About me
+    p Here's some information about me. Here are some things I like:
     ul
-        li Item 1
-        li Item 2
+        li Long walks on the beach
+        li Cheese
 ```
 
-Any blocks that are not redefined will use the content from the base template.
+Any blocks that are not redefined use the content from the base template.
 
 ## Using variables
 
@@ -189,7 +180,9 @@ p Hello, my name is #{name}, and my lucky number is #{luckyNumber}!
 
 ## Using functions
 
-Pug can interpolate the return value of a function like this:
+The return value of a function can be interpolated in a Pug template.
+
+For example, a function like this:
 
 ```js
 app.get("/about", (req, res) => {
@@ -197,7 +190,7 @@ app.get("/about", (req, res) => {
 });
 ```
 
-This can be used by a template like this:
+Can be interpolated in a template as follows:
 
 ```text
 p Hello #{getName()} world!
@@ -262,7 +255,7 @@ Both of these will generate the following HTML:
 
 For more information on how iteration can be used, see the [Pug documentation on Iteration](https://pugjs.org/language/iteration.html).
 
-## Comments
+## Using comments
 
 You can add comments to Pug templates.
 
