@@ -1,8 +1,6 @@
-# Pug
+# The Pug templating engine
 
-There are many templating engines for [Express](/express.md), such as Handlebars, EJS, and Moustache. The default is [Pug](https://pugjs.org/), which we'll cover here.
-
-Pug templates use `.pug` files.
+[Pug](https://pugjs.org/) is the default templating engine for [Express](/express.md). Pug templates use `.pug` files.
 
 ## Hello world!
 
@@ -35,13 +33,13 @@ app.get("/hello", (req, res) => {
 });
 ```
 
-4. Create a template for the view in `/views/hello-world.pug`:
+4. Create a template for the view in `/views/hello-world.pug`, and add some content:
 
 ```text
 p Hello world!
 ```
 
-5. Launch a browser, and navigate to `localhost:3000/hello` to see the text.
+5. Launch a browser, and navigate to `localhost:3000/hello` to see the content.
 
 ## Formatting
 
@@ -117,6 +115,54 @@ Other Pug files can be included as follows:
 ```text
 include otherfile.pug
 ```
+
+## Using blocks
+
+To keep your content clean and organized, you'll typically want to create a base template. All other templates extend from this.
+
+### Creating a base template
+
+Include some `block`s. These are sections of the base template that you want to customize per page.
+
+For example, the `head` (i.e. `block head`) and `body` (i.e. `block body`):
+
+```text
+html
+    head
+        script(src="script.js")
+
+        link(rel="stylesheet", href="css/main.css")
+        block head
+    body
+        block body
+            h1 Home page
+            p welcome
+```
+
+### Extending the base template
+
+To extend from a base template, create a new `.pug` file for your new template.
+
+In the new template, use the `extends` keyword to define the base template being used:
+
+```text
+extends home.pug
+...
+```
+
+Then redefine any `block`s that you want changed from the base template:
+
+```text
+...
+block body
+    h1 Another page
+    p Welcome to another page! Here's a list:
+    ul
+        li Item 1
+        li Item 2
+```
+
+Any blocks that are not redefined will use the content from the base template.
 
 ## Using variables
 
@@ -215,3 +261,28 @@ Both of these will generate the following HTML:
 ```
 
 For more information on how iteration can be used, see the [Pug documentation on Iteration](https://pugjs.org/language/iteration.html).
+
+## Comments
+
+You can add comments to Pug templates.
+
+These can either be visible in the resulting HTML (i.e. the equivalent of `<!-- Comment -->`):
+
+```text
+// This comment will be visible in the HTML
+
+//
+    This multi-line comment
+    will also be visible in the HTML
+    via "View Page Source"
+```
+
+Or not visible in the resulting HTML (i.e. only visible in the template file):
+
+```text
+//- This comment will *not* be visible in the HTML
+
+//-
+    It is only visible
+    in the .pug file
+```
