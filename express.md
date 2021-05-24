@@ -225,6 +225,45 @@ app.get("/user", (req, res) =>
 ...
 ```
 
+### Serving static files
+
+Anything stored in the `/public` subfolder (or any other subfolder) can be exposed at the root level using the `express.static` middleware:
+
+```js
+...
+
+app.use(express.static("public")); // or specify a subfolder other than "public"
+
+...
+```
+
+If there is, for example, an `index.html` file in this subfolder then this will be served at the root level. But this is commonly used to make images, CSS, or other files available via your server.
+
+### Sending files via download
+
+The [`res.download()`](https://expressjs.com/en/api.html#res.download) method can be used to transfer a file as a download (i.e. which prompts the user via the browser):
+
+```js
+...
+
+// Download a file
+app.get("/download", (req, res) => res.download("public/file.pdf");
+
+// Download a file with a custom name
+app.get("/download", (req, res) => res.download("public/file.pdf", "your-statement.pdf");
+
+// Download file, then execute code when file has been sent
+app.get("/download", (req, res) => res.download("public/file.pdf", "your-statement.pdf", (err) => {
+  if (err) {
+    // Handle error
+  } else {
+    // Some other logic, like decrementing the number of download credits, for example
+  }
+});
+
+...
+```
+
 ### Sending an empty response
 
 If you don't have anything to send to the client, the [`res.end()`](https://expressjs.com/en/api.html#res.end) method can be used to close the connection to the client:
@@ -438,3 +477,51 @@ app.listen(3000, () => console.log("Server ready on port 3000"));
 ```
 
 TODO
+
+## Using middleware
+
+Middleware is a function that is inserted into the routing process, and performs an operation (e.g. edit the request or response object, or terminate a request before some code executes).
+
+Using [middleware in Express](https://expressjs.com/en/resources/middleware.html) is similar to defining a route, but in addition to the `req` and `res` objects, there is a `next` function:
+
+```js
+app.use((req, res, next) => {
+  /* code here */
+});
+```
+
+The `next` function is used to pass the execution to the next handler, after the middleware has been executed.
+
+An example of middleware is [`cookie-parser`](https://www.npmjs.com/package/cookie-parser), which is used to parse cookie headers into a `req.cookies` object. After installing the package from NPM, you can use it in your app:
+
+```js
+const express = require("express");
+const app = express();
+const cookieParser = require("cookie-parser");
+
+app.get("/", (req, res) => res.send("Hello world!"));
+
+app.use(cookieParser());
+app.listen(3000, () => console.log("Server ready on port 3000"));
+```
+
+The code above will use `cookie-parser` on all routes. But you can also set middleware to only run on specific routes by using it as the second parameter when defining a route:
+
+```js
+...
+
+const middleware = (req, res, next) => {
+  /* code here */
+  next();
+}
+
+app.get("/", middleware, (req, res) => res.send("Hello world!"));
+
+...
+```
+
+Data stored by middleware is available in the `req.locals` object. For example, if middleware stored a `name` with the value `"Sam"`:
+
+```js
+console.log(req.locals.name); // Logs "Sam"
+```
