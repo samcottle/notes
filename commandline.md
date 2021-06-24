@@ -75,6 +75,11 @@ The commands for getting help aren't standardized, but generally speaking you ca
 - `sed`: Search and replace text in a file. For example, to replace the word `set` with `configure` in the file called `settings.conf` you would use `sed s/set/configure settings.conf`.
 - `diff`: Compare differences between two files. To present the results in a more Git-like manner, use the `-u` flag. For example, to compare the differences between the files `Dogs.txt` and `MoreDogs.txt` you would use `diff -u Dogs.txt MoreDogs.txt`.
 
+## Encrypting files
+
+- `openssl -aes-256-cbc -in file.txt -out file.txt.encrypted`: Encrypts `file.txt`.
+- `openssl -aes-256-cbc -d -in file.txt.encrypted -out file.txt`: Decrypts `file.txt.encrypted`.
+
 ## Downloading files
 
 ### `curl`
