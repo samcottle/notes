@@ -251,7 +251,7 @@ The end of each line needs to be denoted with a `\`.
 
 Stubs are text that is added to a shell script as it is being developed, to help the person creating the script how it will run.
 
-For example, if we are writing a program to print a system report, you might want to include a function that checks the disk space. Before you have defined this function in your script, you can use `echo "Running function disk_space"` to understand how the function it will be executed.
+For example, if we are writing a program to print a system report, you might want to include a function that checks the disk space. Before you have defined this function in your script, you can use `echo "Running function disk_space"` to understand how the function it will be executed:
 
 ```bash
 report_disk_space () {
@@ -264,7 +264,7 @@ Then later replace this with the code that you intend to use:
 
 ```bash
 report_disk_space () {
-    echo"<h2>Disk space used</h2>
+    echo "<h2>Disk space used</h2>
     <PRE>$(df -h)</PRE>"
     return
 }
