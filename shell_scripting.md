@@ -113,6 +113,85 @@ g="\t\Tabbed content\n"
 h="The answer to the ultimate question of life, the universe, and everything is " i=42
 ```
 
+## Using functions
+
+Shell functions are a good way of breaking a big task into smaller, simpler steps. The use the format:
+
+```bash
+function name {
+    commands
+    return
+}
+```
+
+The `return` command, used at the end of each function, terminates it and return control to the program.
+
+Functions need to be defined at the beginning of a script, before they are executed in the program:
+
+```bash
+#!/bin/bash
+
+# Functions defined here
+function steptwo {
+    echo "Step 2"
+    return
+}
+
+function theend {
+    echo "End of steps"
+    return
+}
+
+# Program defined here
+echo "Step 1"
+steptwo
+echo "Step 3"
+theend
+```
+
+As an example, if we wanted to add some information to our system report with information on the amount of **disk space**, the amount of space in the **home folder**, and the **system uptime**, we could do this using shell functions:
+
+```bash
+#!/bin/bash
+
+# Program for outputting system information page
+
+TITLE="System report for $HOSTNAME"
+CURRENT_TIME=$(date +"%x %r %Z")
+TIME_STAMP="Generated $CURRENT_TIME, by $USER"
+
+report_disk_space () {
+    echo "<h2>Disk space used</h2>
+    <PRE>$(df --h)</PRE>"
+    return
+}
+
+report_home_space () {
+    echo "<h2>Home space used</h2>
+    <PRE>$(df --h /home/*)</PRE>"
+    return
+}
+
+report_uptime () {
+    echo "<h2>System uptime</h2>
+    <PRE>$(uptime)</PRE>"
+    return
+}
+
+echo "<HTML>
+    <HEAD>
+        <TITLE>$TITLE</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>$TITLE</H1>
+        <P>$TIME_STAMP</P>
+        $(report_disk_space)
+        $(report_home_space)
+        $(report_uptime)
+    </BODY>
+</HTML>"
+```
+
 ## Best practices
 
 To make a shell script easier to maintain, the following practices are recommended.
@@ -167,3 +246,26 @@ find ~ \
 Double, triple, or tab-spaces can be used (depending on the style guide being followed).
 
 The end of each line needs to be denoted with a `\`.
+
+### Use stubs
+
+Stubs are text that is added to a shell script as it is being developed, to help the person creating the script how it will run.
+
+For example, if we are writing a program to print a system report, you might want to include a function that checks the disk space. Before you have defined this function in your script, you can use `echo "Running function disk_space"` to understand how the function it will be executed.
+
+```bash
+report_disk_space () {
+    echo "Running function disk_space."
+    return
+}
+```
+
+Then later replace this with the code that you intend to use:
+
+```bash
+report_disk_space () {
+    echo"<h2>Disk space used</h2>
+    <PRE>$(df -h)</PRE>"
+    return
+}
+```
