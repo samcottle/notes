@@ -363,3 +363,15 @@ If you want to start or stop the VNC server from the command line:
 
 - `vncserver`: Starts the VNC server, and provides the IP address/display number to connect to.
 - `vncserver -kill :1`: This terminates the VNC server with display number `1` (change the `1` to whatever display number was being used).
+
+### Weechat
+
+After opening `weechat`, you can use the following commands in the buffer:
+
+- `/server add liberachat irc.libera.chat/6697 -ssl`: Adds a server to the list, gives it an alias (in this case `liberachat`), and connects to it over SSL.
+- `/fset liberachat`: Sets `liberachat` as the default IRC server.
+- `/join #channelname`: Joins the channel `#channelname`.
+- `/part #channelname`: Leave the channel `#channelname`.
+- **Alt** + number: Switches the active channel (a list of available channels is shown on the left side of the screen).
+- `/list -re *topic*`: Lists channels on the server that contain the `topic`.
+- `/query username`: Start a private conversation with the user `username`.
