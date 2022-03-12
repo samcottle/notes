@@ -279,7 +279,11 @@ app.get("/", (req, res) => {
 ...
 ```
 
-### Managing cookies
+## Cookies and sessions
+
+Express requests are sequential by default. In other words, requests can't be linked to each other... unless using cookies and/or sessions.
+
+### Usings cookies
 
 The [`res.cookie()`](https://expressjs.com/en/api.html#res.cookie) method can be used to set or manipulate a cookie.
 
@@ -330,6 +334,18 @@ app.get("/admin", (req, res) =>
 );
 
 ...
+```
+
+### Using sessions
+
+When implemented, every user of your API or website is assigned a unique session. This can be used to store a user state.
+
+The simplest way to do this is the [`express-session`](https://www.npmjs.com/package/express-session) middleware.
+
+```js
+TODO
+
+app.use(session('secret': '343ji43j4n3jn4jk3n')) // This is very rough
 ```
 
 ## Working with HTTP headers

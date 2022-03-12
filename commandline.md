@@ -366,10 +366,20 @@ If you want to start or stop the VNC server from the command line:
 
 ### Weechat
 
-After opening `weechat`, you can use the following commands in the buffer:
+After opening `weechat`, you can use the following commands in the buffer.
+
+Getting set up:
 
 - `/server add liberachat irc.libera.chat/6697 -ssl`: Adds a server to the list, gives it an alias (in this case `liberachat`), and connects to it over SSL.
 - `/fset liberachat`: Sets `liberachat` as the default IRC server.
+
+Connecting:
+
+- `/connect liberachat`: Connects to the server `liberachat`.
+- `/msg NickServ IDENTIFY NicknameHere PasswordHere`: Logs in with an existing account.
+
+Using Weechat:
+
 - `/join #channelname`: Joins the channel `#channelname`.
 - `/part #channelname`: Leave the channel `#channelname`.
 - **Alt** + number: Switches the active channel (a list of available channels is shown on the left side of the screen).
