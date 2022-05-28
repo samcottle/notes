@@ -91,6 +91,14 @@ But when the subordinate clause comes before the main clause (which is done for 
 
 > Waneer het koud is, **draagt zij** een jas (when it's cold, she wears a jacket).
 
+Another example:
+
+> Ik werk morgen misschien in Amsterdam (I might be working in Amsterdam tomorrow).
+
+But if I want to emphasize *tomorrow*:
+
+> Morgen werk ik misschien in Amsterdam (**Tomorrow** I might be working in Amsterdam).
+
 ## Prepositions and circumpositions
 
 A _preposition_ comes before a noun, and describes its location or direction. Examples are _met_ (with), _naar_ to, _voor_ and _achter_ (before and after), _naast_ (next to), _beneden_ and _boven_ (below and above), _onder_ and _over_ (under and over), _bij_ (at or near), _op_ (on), _tussen_ (between), _binnen_ and _buiten_ (inside and outside).
