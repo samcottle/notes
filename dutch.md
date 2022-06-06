@@ -95,7 +95,7 @@ Another example:
 
 > Ik werk morgen misschien in Amsterdam (I might be working in Amsterdam tomorrow).
 
-But if I want to emphasize *tomorrow*:
+But if I want to emphasize _tomorrow_:
 
 > Morgen werk ik misschien in Amsterdam (**Tomorrow** I might be working in Amsterdam).
 

@@ -383,7 +383,7 @@ Using Weechat:
 - `/join #channelname`: Joins the channel `#channelname`.
 - `/part #channelname`: Leave the channel `#channelname`.
 - **Alt** + number: Switches the active channel (a list of available channels is shown on the left side of the screen).
-- `/list -re *topic*`: Lists channels on the server that contain the `topic`.
-- `/msg alis LIST *topic*`: Returns a list of channels on libera.chat that contain the `topic`.
+- `/list -re topic`: Lists channels on the server that contain the `topic`.
+- `/msg alis LIST *topic*`: Returns a list of channels on the server that contain the `topic`.
 - `/query username`: Start a private conversation with the user `username`.
 - `/quit`: Quits `weechat`.
