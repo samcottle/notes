@@ -202,3 +202,7 @@ Does someone _have_ something? If you're talking to someone directly they _hebt_
 But:
 
 > Hij **heeft** een ui. (He has an egg)
+
+### Z'on vs. zulk/e
+
+Z'on is the singular, zulk/e is the plural.
