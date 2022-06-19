@@ -203,6 +203,8 @@ But:
 
 > Hij **heeft** een ui. (He has an egg)
 
-### Z'on vs. zulk/e
+### Zo'n vs. zulk/e vs. zoiets
 
-Z'on is the singular, zulk/e is the plural.
+Zo'n is the singular (it's an abbreviation of "such an"), zulk/e is the plural.
+
+Zoiets is "such a thing" or "something like".
