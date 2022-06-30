@@ -99,11 +99,13 @@ But if I want to emphasize _tomorrow_:
 
 > Morgen werk ik misschien in Amsterdam (**Tomorrow** I might be working in Amsterdam).
 
-## Prepositions and circumpositions
+## Prepositions, postpositions, and circumpositions
 
 A _preposition_ comes before a noun, and describes its location or direction. Examples are _met_ (with), _naar_ to, _voor_ and _achter_ (before and after), _naast_ (next to), _beneden_ and _boven_ (below and above), _onder_ and _over_ (under and over), _bij_ (at or near), _op_ (on), _tussen_ (between), _binnen_ and _buiten_ (inside and outside).
 
-In Dutch they also have _circumpositions_. These are similar to prepositions, but split in two parts that are placed before (i.e. _preposition_) and after (_postposition_). An example is _naartoe_, which in most sentences is split into _naar_ and _toe_ (_Ik ga naar jou toe._ - I am going **towards** you), to imply direction. Here are some more examples:
+_Postpositions_ come after the word, and are used to describe movement. Examples are _in_ (_Ik loop het bos in_ = I am walking into the forest), _op_ (_Ik ga de berg op_ - I am going up the mountain), _uit_ (_Ik kom mijn kamer uit_ - I am coming out of my room), _omlaag_ and _omhoog_ (down and up), and _vooruit_ and _achteruit_ (forwards and backwards).
+
+Finally, in Dutch they also have _circumpositions_. These are similar to prepositions, but split in two parts that are placed before (i.e. _preposition_) and after (_postposition_). An example is _naartoe_, which in most sentences is split into _naar_ and _toe_ (_Ik ga naar jou toe._ - I am going **towards** you), to imply direction. Here are some more examples:
 
 - _achteraan_: _achter_ and _aan_, to imply moving **behind**.
 - _doorheen_: _door_ and _heen_, to imply going **through**.
@@ -113,6 +115,12 @@ In Dutch they also have _circumpositions_. These are similar to prepositions, bu
 - _overheen_: _over_ and _heen_, to imply going **across**.
 - _tussendoor_: _tussen_ and _door_, to imply going **in-between**.
 - _vanaf_: _van_ and _af_, to imply going **away from**.
+
+## Om + te, or te + infinitive
+
+Signifies purpose and/or reason, and roughly translates as "in order to".
+
+Often used in response to a "Waarom...?" or a "Waarvoor...?" question.
 
 ## Tense
 
