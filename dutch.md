@@ -122,6 +122,20 @@ Signifies purpose and/or reason, and roughly translates as "in order to".
 
 Often used in response to a "Waarom...?" or a "Waarvoor...?" question.
 
+## Reflexives
+
+A reflexive is a verb that is the subject _and_ an object. In English these are phrases like "I wash myself" or "She teaches herself".
+
+Dutch being Dutch, there are several variations (depending on whether the reflexive is stressed or unstressed; or formal or informal).
+
+| English | Dutch (unstressed) | Dutch (stressed) |
+| :--     | :--                | :--              |
+| Myself  | Me                 | Mezelf           |
+| Yourself/ves | Je            | Jezelf           |
+| Youself (formal) | Zich      | Uzelf            |
+| Himself / Herself / Itself / Themselves | Zich | Zichzelf    |
+| Ourselves | Ons              | Onszelf          |
+
 ## Tense
 
 ### Present continuous
