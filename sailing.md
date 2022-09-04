@@ -11,7 +11,7 @@
 
 ### Tacking
 
-Technique used to sailing upwind, by moving the bow from one side of the wind to the other.
+Technique used to sail **upwind**, by moving the bow from one side of the wind to the other.
 
 A **port tack** is a tack where the wind is hitting the _port side_ of the boat (i.e. you're actually turning _to_ starboard).
 
@@ -19,9 +19,9 @@ A **starboard tack** is a tack where the wind is hitting the _starboard side_ of
 
 ### Gybing
 
-Technique used to sailing downwind, by moving the bow from one side of the wind to the other.
+Technique used to sail **downwind**, by moving the bow from one side of the wind to the other.
 
-A variation on this, often used in strong or gusty winds, is to do a 'chicken gybe'. Instead of moving the bow 90 degrees across the wind, you move it 270 degrees in the opposite direction. So it's a bit like taking 3x left turns instead of 1x right turn (or vice versa).
+In strong or gusty winds, an alternative is to do a _chicken gybe_. Instead of moving the bow directly across the wind by 90 degrees, you move it 270 degrees in the opposite direction (360 - 270 = 90). 
 
 ### Heave to
 
@@ -35,13 +35,15 @@ Achieved by:
 
 ## Right of way rules
 
-These rules are for Dutch inland waterways (i.e. canals, rivers, etc.). Different rules apply depending on where you sail.
+When sailing in Dutch inland waterways (i.e. canals, rivers, etc.) you need to adhere to certain rules. These define which vessel has right of way (`>`). 
 
 The rules, in order, are:
 
-1. Good seamanship (i.e. be safe, aware of your surroundings, avoid restricted areas, etc.).
+1. Good seamanship (i.e. be safe, aware of surroundings, avoid restricted areas, etc.).
 2. Starboard side > everyone.
 3. Big > small (big == 20m+).
 4. Sail > muscle > engine.
-5. Starboard tack (tack to the left) > port tack (tack to the right).
+5. Starboard tack (tack to the left) > port tack (tack to the right). Basically, the boat getting hit by wind on starboard has priority. And when both boats are…
 6. Windward > Leeward.
+
+Different rules may apply in other countries, or in open water. 
