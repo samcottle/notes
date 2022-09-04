@@ -35,15 +35,15 @@ Achieved by:
 
 ## Right of way rules
 
-When sailing in Dutch inland waterways (i.e. canals, rivers, etc.) you need to adhere to certain rules. These define which vessel has right of way (`>`). 
+When sailing in Dutch inland waterways (i.e. canals, rivers, etc.) you need to adhere to certain rules. These define which vessel has right of way (`>`) over others. 
 
 The rules, in order, are:
 
 1. Good seamanship (i.e. be safe, aware of surroundings, avoid restricted areas, etc.).
-2. Starboard side > everyone.
-3. Big > small (big == 20m+).
+2. Starboard side of the waterway > everyone.
+3. Big > small (where big = 20m+).
 4. Sail > muscle > engine.
-5. Starboard tack (tack to the left) > port tack (tack to the right). Basically, the boat getting hit by wind on starboard has priority. And when both boats are…
-6. Windward > Leeward.
+5. Starboard tack (tack to the left) > port tack (tack to the right). Basically, the boat getting hit by wind on starboard has priority.
+6. Leeward > Windward.
 
-Different rules may apply in other countries, or in open water. 
+Different rules apply in other countries, or in open water. 
