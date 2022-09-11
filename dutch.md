@@ -152,8 +152,8 @@ Regular verbs are suffixed with either **-de** or **-te**. For example:
 
 This is unless the stem already ends in a **d** or a **t**, in which case it gets an extra one. For example:
 
-- Ik leerde snel (I learned quickly).
-- De mannen praatten de hele nacht (the men were talking all night).
+- _Ik leerde snel_ (I learned quickly).
+- _De mannen praatten de hele nacht_ (the men were talking all night).
 
 ### Present continuous
 
