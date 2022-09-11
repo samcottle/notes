@@ -138,6 +138,23 @@ Dutch being Dutch, there are several variations (depending on whether the reflex
 
 ## Tense
 
+### Past tense
+
+#### Past simple
+
+This is used as a 'storytelling tense'. It describes something that happened in the past, as part of a longer story.
+
+Regular verbs are suffixed with either **-de** or **-te**. For example:
+
+- _Leerde_ (Learned)
+- _Werkte_ (Worked)
+- _Fietste_ (Cycled)
+
+This is unless the stem already ends in a **d** or a **t**, in which case it gets an extra one. For example:
+
+- Ik leerde snel (I learned quickly).
+- De mannen praatten de hele nacht (the men were talking all night).
+
 ### Present continuous
 
 In Dutch, there are six ways of using present continuous. In other words, there are six ways to say "He is writing":
