@@ -345,8 +345,8 @@ Commands for other CLI apps I use frequently.
 The [Finger protocol](https://en.wikipedia.org/wiki/Finger_(protocol)) is the original social network (and perhaps also the [original IoT protocol](https://www.cs.cmu.edu/~coke/history_long.txt)?).
 
 Your profile and status are updated by maintaining the following files in your `/home` directory:
-- `.plan`: Your 'profile'.
-- `.project`: The project you're working on (your 'status').
+- `.plan`: Your profile and/or status.
+- `.project`: The project you're working on.
 
 Common commands are:
 - `finger`: Lists all users on your server.
