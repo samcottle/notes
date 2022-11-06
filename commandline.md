@@ -347,16 +347,20 @@ The [Finger protocol](https://en.wikipedia.org/wiki/Finger_(protocol) is the ori
 - `.project`: The project you're working on (your 'status').
 
 Common commands are:
-- `finger`: Lists all users on the server.
+- `finger`: Lists all users on your server.
+- `finger @example.com`: Lists all users on a _remote_ server.
 - `finger -l`: Lists all users on the server, as well as user information.
-- `finger user`: Shows information (from `.plan` and `.project`) for a user on the same server.
-- `finger user@example.com`: Shows information (from `.plan` and `.project`) on a _remote_ server.
-- `finger @example.com`: Lists all users on a remote server.
+- `finger user`: Shows information for a user on your server.
+- `finger user@example.com`: Shows information for a user on a _remote_ server.
 
-Some remote finger servers:
-- @finger.farm
-- @happynetbox
-- @plan.cat
+Examples of users:
+- `finger amsterdam@graph.no`
+- `finger blast-rules@happynetbox.com`
+
+Some finger servers:
+- `finger @finger.farm`
+- `finger @happynetbox`
+- `finger @plan.cat`
 
 ### Glow
 
