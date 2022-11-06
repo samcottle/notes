@@ -342,7 +342,9 @@ Commands for other CLI apps I use frequently.
 
 ### Finger
 
-The [Finger protocol](https://en.wikipedia.org/wiki/Finger_(protocol) is the original social network. Your profile and status are updated by maintaining the following files in your `/home` directory:
+The [Finger protocol](https://en.wikipedia.org/wiki/Finger_(protocol)) is the original social network (and perhaps also the [original IoT protocol](https://www.cs.cmu.edu/~coke/history_long.txt)?).
+
+Your profile and status are updated by maintaining the following files in your `/home` directory:
 - `.plan`: Your 'profile'.
 - `.project`: The project you're working on (your 'status').
 
