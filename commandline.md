@@ -356,8 +356,9 @@ Common commands are:
 - `finger user@example.com`: Shows information for a user on a _remote_ server.
 
 Examples of users:
-- `finger amsterdam@graph.no`
-- `finger blast-rules@happynetbox.com`
+- `finger amsterdam@graph.no` (get the weather forecast for Amsterdam)
+- `finger blast-rules@happynetbox.com` (play a game)
+- `finger random@happynetbox.com` (view a random HappyNetBox user)
 
 Some finger servers:
 - `finger @finger.farm`
