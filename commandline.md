@@ -382,6 +382,31 @@ Common commands for the [Hugo static site generator](https://www.gohugo.io/):
 - `hugo server -D`: Starts a [localhost](http://localhost:1313/) server with your site, including any draft posts.
 - `hugo -D`: Build static site. This site can be deployed to a production web server.
 
+### tmux
+
+Starting tmux:
+- `tmux`: Starts tmux.
+- `tmux new -s session-name`: Starts a named tmux session.
+
+When in a session you can use windows with **Ctrl + b**, then:
+- **c**: **C**reates a new window.
+- **n**: Moves to the **n**ext window.
+- **p**: Moves to the **p**revious window.
+- **0** - **9**: Moves to a window numbered 0 to 9.
+- **w**: Shows a list of **w**indows.
+
+When in a session you can use window panes with **Ctrl + b**, then:
+- **"**: Splits the window horizontally.
+- **%**: Splits the window vertically.
+- Arrow keys: Move between the panes.
+- **q**: Shows the number of each window pane.
+- **x**: Closes the current window pane.
+
+Detaching an attaching sessions:
+- **Ctrl + b**, then **d**: **D**etaches a session.
+- **Ctrl + b**, then **s**: Shows a list of **s**essions.
+- `tmux attach-session -t session-name`: Attaches an existing session.
+
 ### VNC server
 
 If you want to start or stop the VNC server from the command line:
