@@ -388,6 +388,11 @@ Starting tmux:
 - `tmux`: Starts tmux.
 - `tmux new -s session-name`: Starts a named tmux session.
 
+Detaching an attaching sessions:
+- **Ctrl + b**, then **d**: **D**etaches a session.
+- **Ctrl + b**, then **s**: Shows a list of **s**essions.
+- `tmux attach-session -t session-name`: Attaches an existing session.
+
 When in a session you can use windows with **Ctrl + b**, then:
 - **c**: **C**reates a new window.
 - **n**: Moves to the **n**ext window.
@@ -401,11 +406,6 @@ When in a session you can use window panes with **Ctrl + b**, then:
 - Arrow keys: Move between the panes.
 - **q**: Shows the number of each window pane.
 - **x**: Closes the current window pane.
-
-Detaching an attaching sessions:
-- **Ctrl + b**, then **d**: **D**etaches a session.
-- **Ctrl + b**, then **s**: Shows a list of **s**essions.
-- `tmux attach-session -t session-name`: Attaches an existing session.
 
 ### VNC server
 
