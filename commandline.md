@@ -1,6 +1,10 @@
-# Basic Linux commands
+# Command line cheat sheet
 
-For a good overview on common Linux commands for various tasks see [this mind map](https://xmind.app/m/WwtB/).
+For a good overview on common Linux commands and what they do: 
+- By task, see [this mind map](https://xmind.app/m/WwtB/).
+- By command, [cheat.sh](https://cheat.sh/), or `curl cheat.sh`.
+
+# Basic Linux commands
 
 - `cd`: Change the working directory. `cd folder1` would change you to the working directory with the name `folder1`.
 - `ls`: List the files in a directory. For more information (such as permissions) on each of the files in the directory, use `ls -l`. To list all files, including hidden files, use `ls -a`.
