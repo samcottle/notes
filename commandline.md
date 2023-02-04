@@ -4,6 +4,8 @@ For a good overview on common Linux commands and what they do:
 - By task, see [this mind map](https://xmind.app/m/WwtB/).
 - By command, [cheat.sh](https://cheat.sh/), or `curl cheat.sh`.
 
+A good resource to learn more about the Linux command line is the [Linux upskill challenge](https://github.com/livialima/linuxupskillchallenge).
+
 # Basic Linux commands
 
 - `cd`: Change the working directory. `cd folder1` would change you to the working directory with the name `folder1`.
@@ -18,7 +20,6 @@ For a good overview on common Linux commands and what they do:
 - `clear`: Clears the terminal.
 - `history`: Displays a list of recently typed commands (to a maximum of 500).
 - `shutdown`: Shut down the computer. `sudo shutdown now` would shutdown the computer immediately (i.e. `now`). To reboot, use `sudo shutdown -r`.
-
 ## Common directories
 
 Useful directories within a 'standard' Linux filesystem include:
@@ -45,6 +46,8 @@ Useful directories within a 'standard' Linux filesystem include:
 - `/var`: Contains 'various' data. Any data that will likely change, such as databases or mail files.
 - `/var/log`: Contains log files of system activity. `/var/log/messages` is probably the most used.
 
+You can also get folder descriptions using the command `man hier`.
+
 ## Finding stuff
 
 There are several commands that can be used for finding files:
@@ -55,6 +58,9 @@ There are several commands that can be used for finding files:
 
 ## Logging
 
+Linux logs a lot of things in the background. These are typically stored in `/var/log`.
+
+- `logrotate`: Specifies log rotation behaviour (its configuration file is `/etc/logrotate.conf`).
 - `last`: View history of successful login attempts.
 - `lastb`: View history of bad login attempts.
 
