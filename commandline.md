@@ -386,6 +386,16 @@ Some finger servers:
 - `glow https://raw.githubusercontent.com/samcottle/notes/master/commandline.md`: Fetches a markdown file from a URL.
 - `glow github.com/charmbracelet/glow`: Fetches a README.md from Github or Gitlab.
 
+### GPG
+
+Signing a file:
+- `gpg --sign filename.txt`: Signs a file, and outputs a version appended with `.gpg`.
+- `gpg --clearsign filename.txt`: Outputs a version of the file with your signature included.
+
+Verifying a signed file:
+- `gpg --verify filename.txt.gpg`: Verify a signed file (the file may still be garbled when opened).
+- `gpg --output test.txt --decrypt test.txt.gpg`: Verify a signed file, and outputs an ungarbled file.
+
 ### Hugo
 
 Common commands for the [Hugo static site generator](https://www.gohugo.io/):
