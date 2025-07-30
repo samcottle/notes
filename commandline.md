@@ -390,6 +390,7 @@ Some finger servers:
 
 Signing a file:
 - `gpg -b filename.txt`: Signs a file, and creates a seperate signature file (`filename.txt.sig`).
+- `gpg --clearsign filename.txt`: Creates a duplicate of the file with an embedded signature (`filename.txt.asc`).
 
 Verifying a signed file:
 - `gpg --verify filename.txt.sig`: Verify the signed file.
