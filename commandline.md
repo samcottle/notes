@@ -389,12 +389,10 @@ Some finger servers:
 ### GPG
 
 Signing a file:
-- `gpg --sign filename.txt`: Signs a file, and outputs a version appended with `.gpg`.
-- `gpg --clearsign filename.txt`: Outputs a version of the file with your signature included.
+- `gpg -b filename.txt`: Signs a file, and creates a seperate signature file (`filename.txt.sig`).
 
 Verifying a signed file:
-- `gpg --verify filename.txt.gpg`: Verify a signed file (the file may still be garbled when opened).
-- `gpg --output test.txt --decrypt test.txt.gpg`: Verify a signed file, and outputs an ungarbled file.
+- `gpg --verify filename.txt.sig`: Verify the signed file.
 
 ### Hugo
 
